@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <div id="head-content"></div>
+</head>
+<body>
+  <div id="navbar-content"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebar-content"></div>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">หน่วยที่ 2: การเขียนโปรแกรม</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
+              <i class="fas fa-moon"></i> โหมดกลางคืน
+            </button>
+          </div>
+        </div>
+
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="unit2.html">หน่วยที่ 2</a></li>
+            <li class="breadcrumb-item active" aria-current="page">การเขียนโปรแกรม</li>
+          </ol>
+        </nav>
+
+        <div class="card mb-4">
+          <div class="card-header bg-info text-white">
+            <h3><i class="fas fa-keyboard me-2"></i>การเขียนโปรแกรม</h3>
+          </div>
+          <div class="text-center my-4">
+            <img src="images/lesson2-3.jpg" alt="การเขียนโปรแกรม" class="img-fluid rounded" style="max-height: 300px">
+          </div>
+          <div class="card-body">
+            <h4 class="text-info">โครงสร้างพื้นฐานของโปรแกรม</h4>
+            
+            <div class="row mb-4">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-info text-white">1. การรับข้อมูล</div>
+                  <div class="card-body">
+                    <p>รับข้อมูลจากผู้ใช้หรือแหล่งข้อมูลอื่นๆ</p>
+                    <pre class="bg-light p-2 rounded"><code>input("ป้อนชื่อของคุณ: ")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-info text-white">2. การประมวลผล</div>
+                  <div class="card-body">
+                    <p>คำนวณหรือประมวลผลข้อมูล</p>
+                    <pre class="bg-light p-2 rounded"><code>result = number1 + number2</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-info text-white">3. การแสดงผล</div>
+                  <div class="card-body">
+                    <p>แสดงผลลัพธ์ให้ผู้ใช้</p>
+                    <pre class="bg-light p-2 rounded"><code>print("ผลลัพธ์คือ:", result)</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="text-info mt-4">ตัวอย่างโปรแกรมอย่างง่าย</h4>
+            <div class="card mb-4">
+              <div class="card-header bg-info text-white">
+                <i class="fas fa-code me-2"></i> โปรแกรมคำนวณพื้นที่สี่เหลี่ยม
+              </div>
+              <div class="card-body">
+                <pre class="bg-light p-3 rounded"><code># รับค่าความยาวและความกว้าง
+length = float(input("ป้อนความยาว: "))
+width = float(input("ป้อนความกว้าง: "))
+
+# คำนวณพื้นที่
+area = length * width
+
+# แสดงผลลัพธ์
+print("พื้นที่สี่เหลี่ยมคือ:", area)</code></pre>
+              </div>
+            </div>
+
+            <div class="video-container my-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/programming" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-header bg-primary text-white">
+            <h4><i class="fas fa-tasks me-2"></i>กิจกรรมฝึกทักษะ</h4>
+          </div>
+          <div class="card-body">
+            <h5>กิจกรรม: เขียนโปรแกรมคำนวณ</h5>
+            <p>ให้นักเรียนเขียนโปรแกรมคำนวณพื้นที่วงกลม โดยรับค่ารัศมีจากผู้ใช้</p>
+            <p>สูตร: พื้นที่วงกลม = π × r²</p>
+            <textarea class="form-control mt-2" rows="5" placeholder="เขียนโปรแกรมของคุณที่นี่..."></textarea>
+            <button class="btn btn-primary mt-3">ส่งคำตอบ</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="footer-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

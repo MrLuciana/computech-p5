@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <div id="head-content"></div>
+  <style>
+    .scratch-block {
+      background-color: #4d97ff;
+      color: white;
+      border-radius: 5px;
+      padding: 8px 12px;
+      margin: 5px 0;
+      display: inline-block;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-content"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebar-content"></div>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">หน่วยที่ 2: Scratch</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
+              <i class="fas fa-moon"></i> โหมดกลางคืน
+            </button>
+          </div>
+        </div>
+
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="unit2.html">หน่วยที่ 2</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scratch</li>
+          </ol>
+        </nav>
+
+        <div class="card mb-4">
+          <div class="card-header bg-warning text-dark">
+            <h3><i class="fas fa-cat me-2"></i>Scratch</h3>
+          </div>
+          <div class="text-center my-4">
+            <img src="images/lesson2-5.jpg" alt="Scratch" class="img-fluid rounded" style="max-height: 300px">
+          </div>
+          <div class="card-body">
+            <h4 class="text-warning">พื้นฐานการใช้งาน Scratch</h4>
+            
+            <div class="row mb-4">
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-warning text-white">
+                    <i class="fas fa-puzzle-piece me-2"></i> บล็อกคำสั่ง
+                  </div>
+                  <div class="card-body">
+                    <p>บล็อกคำสั่งพื้นฐานใน Scratch:</p>
+                    <div class="scratch-block">เมื่อคลิกธงสีเขียว</div><br>
+                    <div class="scratch-block">เคลื่อนที่ 10 ก้าว</div><br>
+                    <div class="scratch-block">พูดว่า "สวัสดี!" เป็นเวลา 2 วินาที</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-warning text-white">
+                    <i class="fas fa-user-astronaut me-2"></i> สไปรท์
+                  </div>
+                  <div class="card-body">
+                    <p>ตัวละครใน Scratch สามารถ:</p>
+                    <ul>
+                      <li>เคลื่อนที่</li>
+                      <li>เปลี่ยนท่าทาง</li>
+                      <li>โต้ตอบกับผู้ใช้</li>
+                      <li>โต้ตอบกับสไปรท์อื่น</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100">
+                  <div class="card-header bg-warning text-white">
+                    <i class="fas fa-image me-2"></i> ฉากหลัง
+                  </div>
+                  <div class="card-body">
+                    <p>ฉากหลังสามารถ:</p>
+                    <ul>
+                      <li>เปลี่ยนระหว่างฉาก</li>
+                      <li>มีเอฟเฟกต์ต่างๆ</li>
+                      <li>ใช้เป็นพื้นหลังสำหรับเกม</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="text-warning mt-4">ตัวอย่างโปรแกรม Scratch</h4>
+            <div class="card mb-4">
+              <div class="card-header bg-warning text-white">
+                <i class="fas fa-code me-2"></i> โปรแกรมแมวเดิน
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="images/scratch-cat-code.jpg" alt="โค้ด Scratch" class="img-fluid rounded">
+                  </div>
+                  <div class="col-md-6">
+                    <ol>
+                      <li>เมื่อคลิกธงสีเขียว</li>
+                      <li>เคลื่อนที่ 10 ก้าว</li>
+                      <li>ถ้าแตะขอบ ให้กระดอน</li>
+                      <li>เปลี่ยนท่าทางเดิน</li>
+                      <li>เล่นเสียงแมว</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="video-container my-4">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/scratch-intro" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-header bg-success text-white">
+            <h4><i class="fas fa-tasks me-2"></i>กิจกรรมฝึกทักษะ</h4>
+          </div>
+          <div class="card-body">
+            <h5>กิจกรรม: สร้างโปรแกรม Scratch</h5>
+            <p>ให้นักเรียนออกแบบโปรแกรม Scratch ที่ทำให้สไปรท์:</p>
+            <ul>
+              <li>เคลื่อนที่เมื่อกดปุ่มลูกศร</li>
+              <li>พูดทักทายเมื่อคลิกที่สไปรท์</li>
+              <li>เปลี่ยนสีเมื่อแตะขอบ</li>
+            </ul>
+            <textarea class="form-control mt-2" rows="3" placeholder="อธิบายโปรแกรมของคุณที่นี่..."></textarea>
+            <a href="https://scratch.mit.edu" target="_blank" class="btn btn-warning mt-3">
+              <i class="fas fa-external-link-alt me-1"></i> ไปที่เว็บ Scratch
+            </a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="footer-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

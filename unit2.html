@@ -2,7 +2,107 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <div id="head-content"></div>
+  <style>
+    /* สไตล์ที่ปรับปรุงใหม่ */
+    .hero-section {
+      background: linear-gradient(135deg, #198754 0%, #146c43 100%);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      padding: 3rem 2rem;
+    }
+    
+    .hero-img-container {
+      position: relative;
+      overflow: hidden;
+      min-height: 250px;
+    }
+    
+    .hero-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 280px;
+      border-top-left-radius: 30px;
+      box-shadow: -5px 5px 20px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease;
+    }
+    
+    .hero-img:hover {
+      transform: scale(1.05);
+    }
+    
+    .lesson-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .lesson-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .lesson-img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+    
+    .lesson-card:hover .lesson-img {
+      transform: scale(1.05);
+    }
+    
+    .lesson-number {
+      width: 36px;
+      height: 36px;
+      background-color: #198754;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    
+    .resource-card {
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .resource-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 2rem 1rem;
+      }
+      
+      .hero-img {
+        position: relative;
+        max-height: 200px;
+        margin-top: 20px;
+        border-top-left-radius: 12px;
+      }
+      
+      .lesson-img {
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-content"></div>
@@ -12,334 +112,275 @@
       <div id="sidebar-content"></div>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">หน่วยที่ 2: การเขียนโปรแกรม</h1>
-          <div class="btn-toolbar mb-2 mb-md-0">
-            <button class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
-              <i class="fas fa-moon"></i> โหมดกลางคืน
-            </button>
+        <!-- Hero Section ที่ปรับปรุงใหม่ -->
+        <section class="hero-section mb-5">
+          <div class="row g-0">
+            <div class="col-lg-8 hero-content text-white">
+              <div class="d-flex align-items-center mb-3">
+                <div class="lesson-number">2</div>
+                <h1 class="fw-bold mb-0">การเขียนโปรแกรม</h1>
+              </div>
+              <p class="lead mb-4">เรียนรู้พื้นฐานการเขียนโปรแกรมเบื้องต้น พัฒนาทักษะการคิดเชิงคำนวณ และการแก้ปัญหาอย่างเป็นระบบ</p>
+              <div class="d-flex gap-3">
+                <a href="#lesson-cards" class="btn btn-light btn-lg px-4">
+                  <i class="fas fa-play me-2"></i>เริ่มศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 hero-img-container d-none d-lg-block">
+              <img src="images/lesson2.jpg" alt="การเขียนโปรแกรม" class="hero-img img-fluid">
+            </div>
+          </div>
+        </section>
+
+        <!-- Unit Info ที่ปรับปรุงใหม่ -->
+        <div class="card shadow-sm mb-5 border-0">
+          <div class="card-header bg-white border-0 pb-0">
+            <h3 class="mb-3"><i class="fas fa-info-circle text-success me-2"></i>เกี่ยวกับหน่วยการเรียนรู้</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                <p class="mb-4">หน่วยที่ 2 นี้จะแนะนำพื้นฐานการเขียนโปรแกรมคอมพิวเตอร์ ครอบคลุมเนื้อหาเกี่ยวกับ:</p>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>หลักการทำงานของคอมพิวเตอร์</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>การออกแบบอัลกอริทึมและผังงาน</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>พื้นฐานการเขียนโปรแกรมด้วย Scratch</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>การใช้ตัวแปรและเงื่อนไข</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-light p-4 rounded-3 h-100">
+                  <h5 class="d-flex align-items-center mb-3">
+                    <i class="fas fa-clock text-success me-2"></i>ระยะเวลาเรียน
+                  </h5>
+                  <p class="mb-4">ประมาณ 6 ชั่วโมง</p>
+                  
+                  <h5 class="d-flex align-items-center mb-3">
+                    <i class="fas fa-star text-success me-2"></i>ระดับความยาก
+                  </h5>
+                  <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Lesson Cards ที่ปรับปรุงใหม่ -->
+        <h2 id="lesson-cards" class="mb-4 pb-2 border-bottom">
+          <i class="fas fa-book-open text-success me-2"></i>หัวข้อการเรียนรู้
+        </h2>
         
-        <div class="alert alert-info fade-in">
-          <i class="fas fa-info-circle me-2"></i> เรียนรู้พื้นฐานการเขียนโปรแกรมเบื้องต้น
-        </div>
-        
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="card mb-4">
-              <div class="card-header bg-primary text-white">
-                <i class="fas fa-code me-2"></i> เนื้อหาการเรียนรู้
+        <div class="row g-4 mb-5">
+          <!-- Lesson 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-1.jpg" alt="การทำงานของคอมพิวเตอร์" class="lesson-img w-100">
               </div>
               <div class="card-body">
-                <div class="lesson-tabs mb-4">
-                  <ul class="nav nav-tabs" id="lessonTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="computer-work-tab" data-bs-toggle="tab" data-bs-target="#computer-work" type="button" role="tab">
-                        <i class="fas fa-laptop me-1"></i> การทำงานของคอมพิวเตอร์
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="algorithm-tab" data-bs-toggle="tab" data-bs-target="#algorithm" type="button" role="tab">
-                        <i class="fas fa-project-diagram me-1"></i> การออกแบบอัลกอริทึม
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="programming-tab" data-bs-toggle="tab" data-bs-target="#programming" type="button" role="tab">
-                        <i class="fas fa-keyboard me-1"></i> การเขียนโปรแกรม
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="debugging-tab" data-bs-toggle="tab" data-bs-target="#debugging" type="button" role="tab">
-                        <i class="fas fa-bug me-1"></i> ตรวจสอบข้อผิดพลาด
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="scratch-tab" data-bs-toggle="tab" data-bs-target="#scratch" type="button" role="tab">
-                        <i class="fas fa-cat me-1"></i> Scratch
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="variables-tab" data-bs-toggle="tab" data-bs-target="#variables" type="button" role="tab">
-                        <i class="fas fa-memory me-1"></i> ตัวแปร
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="odd-even-tab" data-bs-toggle="tab" data-bs-target="#odd-even" type="button" role="tab">
-                        <i class="fas fa-divide me-1"></i> เลขคู่/คี่
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="bmi-tab" data-bs-toggle="tab" data-bs-target="#bmi" type="button" role="tab">
-                        <i class="fas fa-weight me-1"></i> คำนวณความสมส่วน
-                      </button>
-                    </li>
-                  </ul>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number">1</div>
+                  <h4 class="mb-0 text-success">การทำงานของคอมพิวเตอร์</h4>
                 </div>
+                <p class="text-muted small mb-3">พื้นฐานการทำงานของระบบคอมพิวเตอร์</p>
+                <p class="card-text">เรียนรู้กระบวนการรับข้อมูล การประมวลผล และการแสดงผลของคอมพิวเตอร์</p>
+                <a href="unit2-1.html" class="btn btn-outline-success w-100 mt-3">
+                  <i class="fas fa-laptop me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lesson 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-2.jpg" alt="การออกแบบอัลกอริทึม" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #fd7e14;">2</div>
+                  <h4 class="mb-0 text-warning">การออกแบบอัลกอริทึม</h4>
+                </div>
+                <p class="text-muted small mb-3">ขั้นตอนการแก้ปัญหาอย่างเป็นระบบ</p>
+                <p class="card-text">วิธีการออกแบบอัลกอริทึมและผังงานเพื่อแก้ปัญหาต่างๆ</p>
+                <a href="unit2-2.html" class="btn btn-outline-warning w-100 mt-3">
+                  <i class="fas fa-project-diagram me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lesson 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-3.jpg" alt="การเขียนโปรแกรม" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #0dcaf0;">3</div>
+                  <h4 class="mb-0 text-info">การเขียนโปรแกรม</h4>
+                </div>
+                <p class="text-muted small mb-3">พื้นฐานการเขียนโค้ดคอมพิวเตอร์</p>
+                <p class="card-text">เรียนรู้โครงสร้างพื้นฐานของโปรแกรมและไวยากรณ์เบื้องต้น</p>
+                <a href="unit2-3.html" class="btn btn-outline-info w-100 mt-3">
+                  <i class="fas fa-keyboard me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
 
-                <div class="tab-content" id="lessonTabsContent">
-                  <!-- หัวข้อ 1: การทำงานของคอมพิวเตอร์ -->
-                  <div class="tab-pane fade show active" id="computer-work" role="tabpanel">
-                    <h3><i class="fas fa-laptop text-primary me-2"></i>การทำงานของคอมพิวเตอร์</h3>
-                    <div class="lesson-content">
-                      <p>คอมพิวเตอร์ทำงานตามกระบวนการพื้นฐาน 3 ขั้นตอน:</p>
-                      <div class="row">
-                        <div class="col-md-4 mb-3">
-                          <div class="card h-100">
-                            <div class="card-body text-center">
-                              <i class="fas fa-keyboard fa-3x text-info mb-3"></i>
-                              <h5>รับข้อมูล</h5>
-                              <p>ผ่านอุปกรณ์อินพุตต่างๆ</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card h-100">
-                            <div class="card-body text-center">
-                              <i class="fas fa-cogs fa-3x text-warning mb-3"></i>
-                              <h5>ประมวลผล</h5>
-                              <p>ตามชุดคำสั่งโปรแกรม</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                          <div class="card h-100">
-                            <div class="card-body text-center">
-                              <i class="fas fa-print fa-3x text-success mb-3"></i>
-                              <h5>แสดงผล</h5>
-                              <p>ผ่านอุปกรณ์เอาต์พุต</p>
-                            </div>
-                          </div>
-                        </div>
+          <!-- Lesson 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-4.jpg" alt="ตรวจสอบข้อผิดพลาด" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #dc3545;">4</div>
+                  <h4 class="mb-0 text-danger">ตรวจสอบข้อผิดพลาด</h4>
+                </div>
+                <p class="text-muted small mb-3">การหาข้อผิดพลาดและการแก้ไขโปรแกรม</p>
+                <p class="card-text">เรียนรู้ประเภทของข้อผิดพลาดและวิธีการ debug โปรแกรม</p>
+                <a href="unit2-4.html" class="btn btn-outline-danger w-100 mt-3">
+                  <i class="fas fa-bug me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lesson 5 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-5.jpg" alt="Scratch" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #ffc107;">5</div>
+                  <h4 class="mb-0 text-warning">Scratch</h4>
+                </div>
+                <p class="text-muted small mb-3">การเขียนโปรแกรมแบบบล็อก</p>
+                <p class="card-text">เรียนรู้การใช้งาน Scratch เพื่อสร้างโปรแกรมอย่างง่าย</p>
+                <a href="unit2-5.html" class="btn btn-outline-warning w-100 mt-3">
+                  <i class="fas fa-cat me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lesson 6 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-6.jpg" alt="ตัวแปร" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #6f42c1;">6</div>
+                  <h4 class="mb-0 text-primary">ตัวแปร</h4>
+                </div>
+                <p class="text-muted small mb-3">การเก็บข้อมูลในโปรแกรม</p>
+                <p class="card-text">เรียนรู้การประกาศและใช้งานตัวแปรในโปรแกรม</p>
+                <a href="unit2-6.html" class="btn btn-outline-primary w-100 mt-3">
+                  <i class="fas fa-memory me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lesson 7 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-7.jpg" alt="เลขคู่/คี่" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #20c997;">7</div>
+                  <h4 class="mb-0 text-success">เลขคู่/คี่</h4>
+                </div>
+                <p class="text-muted small mb-3">การเขียนโปรแกรมตรวจสอบเงื่อนไข</p>
+                <p class="card-text">เรียนรู้การใช้เงื่อนไข if-else ในโปรแกรม</p>
+                <a href="unit2-7.html" class="btn btn-outline-success w-100 mt-3">
+                  <i class="fas fa-divide me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lesson 8 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson2-8.jpg" alt="คำนวณความสมส่วน" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #d63384;">8</div>
+                  <h4 class="mb-0 text-danger">คำนวณความสมส่วน</h4>
+                </div>
+                <p class="text-muted small mb-3">การประยุกต์ใช้โปรแกรมคำนวณ</p>
+                <p class="card-text">เรียนรู้การเขียนโปรแกรมคำนวณค่า BMI</p>
+                <a href="unit2-8.html" class="btn btn-outline-danger w-100 mt-3">
+                  <i class="fas fa-weight me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Section ที่ปรับปรุงใหม่ -->
+        <div class="row mb-5">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <div class="card resource-card h-100">
+              <div class="card-header bg-white border-0">
+                <h3 class="mb-0"><i class="fas fa-graduation-cap text-success me-2"></i>วิธีการเรียนให้มีประสิทธิภาพ</h3>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-check-circle fa-lg text-success mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">ฝึกปฏิบัติจริง</h5>
+                        <p class="mb-0 text-muted">ลองเขียนโปรแกรมตามตัวอย่างและปรับเปลี่ยนดัดแปลง</p>
                       </div>
                     </div>
                   </div>
-
-                  <!-- หัวข้อ 2: การออกแบบอัลกอริทึม -->
-                  <div class="tab-pane fade" id="algorithm" role="tabpanel">
-                    <h3><i class="fas fa-project-diagram text-warning me-2"></i>การออกแบบอัลกอริทึม</h3>
-                    <div class="lesson-content">
-                      <p>อัลกอริทึมคือลำดับขั้นตอนการแก้ปัญหา สามารถแสดงได้หลายรูปแบบ:</p>
-                      
-                      <div class="row mt-4">
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                              <i class="fas fa-list-ol me-2"></i> รายการขั้นตอน
-                            </div>
-                            <div class="card-body">
-                              <ol>
-                                <li>เริ่มต้น</li>
-                                <li>รับข้อมูล</li>
-                                <li>ประมวลผล</li>
-                                <li>แสดงผล</li>
-                                <li>จบการทำงาน</li>
-                              </ol>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-success text-white">
-                              <i class="fas fa-project-diagram me-2"></i> ผังงาน
-                            </div>
-                            <div class="card-body text-center">
-                              <img src="images/flowchart-example.png" alt="ตัวอย่างผังงาน" class="img-fluid" style="max-height: 150px;">
-                            </div>
-                          </div>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-tasks fa-lg text-success mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">ทำแบบฝึกหัด</h5>
+                        <p class="mb-0 text-muted">ฝึกแก้ปัญหาด้วยการเขียนโปรแกรมจากโจทย์ต่างๆ</p>
                       </div>
                     </div>
                   </div>
-
-                  <!-- หัวข้อ 3: การเขียนโปรแกรมคอมพิวเตอร์ -->
-                  <div class="tab-pane fade" id="programming" role="tabpanel">
-                    <h3><i class="fas fa-keyboard text-danger me-2"></i>การเขียนโปรแกรมคอมพิวเตอร์</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-check-circle text-success me-2"></i> โครงสร้างพื้นฐาน</h5>
-                          <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-chevron-right"></i></span>ส่วนประกาศตัวแปร</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right"></i></span>ส่วนรับข้อมูล</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right"></i></span>ส่วนประมวลผล</li>
-                            <li><span class="fa-li"><i class="fas fa-chevron-right"></i></span>ส่วนแสดงผล</li>
-                          </ul>
-                        </div>
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-code text-primary me-2"></i> ตัวอย่างโค้ด</h5>
-                          <pre class="bg-light p-3 rounded"><code>print("Hello, World!")
-name = input("ชื่อของคุณคืออะไร? ")
-print("สวัสดี", name)</code></pre>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-question-circle fa-lg text-success mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">ทดสอบความเข้าใจ</h5>
+                        <p class="mb-0 text-muted">ทำแบบทดสอบหลังเรียนเพื่อประเมินความรู้ของตัวเอง</p>
                       </div>
                     </div>
                   </div>
-
-                  <!-- หัวข้อ 4: การตรวจสอบข้อผิดพลาดของโปรแกรม -->
-                  <div class="tab-pane fade" id="debugging" role="tabpanel">
-                    <h3><i class="fas fa-bug text-danger me-2"></i>การตรวจสอบข้อผิดพลาดของโปรแกรม</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-danger text-white">
-                              <i class="fas fa-times-circle me-2"></i> ข้อผิดพลาดทั่วไป
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Syntax Error (ไวยากรณ์ผิด)</li>
-                              <li class="list-group-item">Logic Error (ตรรกะผิด)</li>
-                              <li class="list-group-item">Runtime Error (เกิดขณะทำงาน)</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-success text-white">
-                              <i class="fas fa-check-circle me-2"></i> วิธีแก้ไข
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">ตรวจสอบบรรทัดที่แจ้ง error</li>
-                              <li class="list-group-item">ทดสอบทีละส่วน</li>
-                              <li class="list-group-item">ใช้เครื่องมือ debug</li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- หัวข้อ 5: การเขียนโปรแกรมด้วย Scratch -->
-                  <div class="tab-pane fade" id="scratch" role="tabpanel">
-                    <h3><i class="fas fa-cat text-info me-2"></i>การเขียนโปรแกรมด้วย Scratch</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-puzzle-piece me-2"></i> ส่วนประกอบสำคัญ</h5>
-                          <ul>
-                            <li>บล็อกคำสั่ง</li>
-                            <li>สไปรท์ (ตัวละคร)</li>
-                            <li>ฉากหลัง</li>
-                          </ul>
-                          
-                          <div class="text-center mt-3">
-                            <a href="https://scratch.mit.edu" target="_blank" class="btn btn-primary">
-                              <i class="fas fa-external-link-alt me-1"></i> ไปที่เว็บ Scratch
-                            </a>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <img src="images/scratch-interface.png" alt="หน้าจอ Scratch" class="img-fluid rounded border">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- หัวข้อ 6: ตัวแปร -->
-                  <div class="tab-pane fade" id="variables" role="tabpanel">
-                    <h3><i class="fas fa-memory text-primary me-2"></i>ตัวแปร</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-info text-white">
-                              <i class="fas fa-info-circle me-2"></i> ความหมาย
-                            </div>
-                            <div class="card-body">
-                              <p>ตัวแปรคือชื่อที่ใช้เก็บข้อมูลในโปรแกรม</p>
-                              <p>เช่น <code>score = 100</code></p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-warning text-dark">
-                              <i class="fas fa-exclamation-triangle me-2"></i> ข้อควรระวัง
-                            </div>
-                            <div class="card-body">
-                              <ul>
-                                <li>ตั้งชื่อให้สื่อความหมาย</li>
-                                <li>ระวังการใช้ตัวอักษรใหญ่เล็ก</li>
-                                <li>ไม่ใช้คำสงวน</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- หัวข้อ 7: การเขียนโปรแกรมตรวจสอบเลขคู่และเลขคี่ -->
-                  <div class="tab-pane fade" id="odd-even" role="tabpanel">
-                    <h3><i class="fas fa-divide text-success me-2"></i>การเขียนโปรแกรมตรวจสอบเลขคู่และเลขคี่</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-code me-2"></i> ตัวอย่างโค้ด</h5>
-                          <pre class="bg-light p-3 rounded"><code>number = int(input("ป้อนตัวเลข: "))
-if number % 2 == 0:
-    print("เลขคู่")
-else:
-    print("เลขคี่")</code></pre>
-                        </div>
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-project-diagram me-2"></i> ผังงาน</h5>
-                          <img src="images/odd-even-flowchart.png" alt="ผังงานเลขคู่คี่" class="img-fluid">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- หัวข้อ 8: การเขียนโปรแกรมคำนวณความสมส่วนของร่างกาย -->
-                  <div class="tab-pane fade" id="bmi" role="tabpanel">
-                    <h3><i class="fas fa-weight text-danger me-2"></i>การคำนวณความสมส่วนของร่างกาย</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-calculator me-2"></i> สูตรคำนวณ BMI</h5>
-                          <p>น้ำหนัก (kg) / ส่วนสูง<sup>2</sup> (m)</p>
-                          
-                          <div class="card mt-3">
-                            <div class="card-header bg-primary text-white">
-                              <i class="fas fa-code me-2"></i> ตัวอย่างโปรแกรม
-                            </div>
-                            <div class="card-body">
-                              <pre class="bg-light p-2 rounded"><code>weight = float(input("น้ำหนัก (kg): "))
-height = float(input("ส่วนสูง (m): "))
-bmi = weight / (height ** 2)
-print("ค่า BMI ของคุณคือ:", round(bmi, 2))</code></pre>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-table me-2"></i> ตารางค่า BMI</h5>
-                          <table class="table table-bordered">
-                            <thead class="table-dark">
-                              <tr>
-                                <th>ค่า BMI</th>
-                                <th>ความหมาย</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>น้อยกว่า 18.5</td>
-                                <td>น้ำหนักน้อย</td>
-                              </tr>
-                              <tr>
-                                <td>18.5 - 22.9</td>
-                                <td>ปกติ</td>
-                              </tr>
-                              <tr>
-                                <td>23.0 - 24.9</td>
-                                <td>ท้วม</td>
-                              </tr>
-                              <tr>
-                                <td>25.0 ขึ้นไป</td>
-                                <td>อ้วน</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-users fa-lg text-success mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">เรียนรู้ร่วมกัน</h5>
+                        <p class="mb-0 text-muted">ปรึกษาและแบ่งปันความรู้กับเพื่อนในชั้นเรียน</p>
                       </div>
                     </div>
                   </div>
@@ -348,54 +389,63 @@ print("ค่า BMI ของคุณคือ:", round(bmi, 2))</code></pre>
             </div>
           </div>
           
-          <!-- ส่วนเสริมด้านข้าง -->
           <div class="col-lg-4">
-            <div class="card mb-4">
-              <div class="card-header bg-success text-white">
-                <i class="fas fa-tasks me-2"></i> แบบฝึกหัด
+            <div class="card resource-card h-100">
+              <div class="card-header bg-white border-0">
+                <h3 class="mb-0"><i class="fas fa-download text-success me-2"></i>เอกสารประกอบการเรียน</h3>
               </div>
               <div class="card-body">
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-question-circle me-2"></i> แบบทดสอบก่อนเรียน
+                <div class="list-group list-group-flush">
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-pdf fa-lg text-danger resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">เอกสารประกอบหน่วยที่ 2</h6>
+                        <small class="text-muted">PDF • 25 หน้า</small>
+                      </div>
+                    </div>
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-puzzle-piece me-2"></i> ฝึกเขียนผังงาน
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-word fa-lg text-primary resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">แบบฝึกหัดการเขียนโปรแกรม</h6>
+                        <small class="text-muted">DOCX • 15 แบบฝึกหัด</small>
+                      </div>
+                    </div>
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-laptop-code me-2"></i> โปรแกรมแรกใน Scratch
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-powerpoint fa-lg text-warning resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">สไลด์การสอนเต็มหน่วย</h6>
+                        <small class="text-muted">PPTX • 60 สไลด์</small>
+                      </div>
+                    </div>
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-clipboard-check me-2"></i> แบบทดสอบหลังเรียน
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-link fa-lg text-info resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">แหล่งเรียนรู้เพิ่มเติม</h6>
+                        <small class="text-muted">รวมลิงก์น่าสนใจ</small>
+                      </div>
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
-            
-            <div class="card mb-4">
-              <div class="card-header bg-warning text-dark">
-                <i class="fas fa-download me-2"></i> เอกสารประกอบ
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <a href="#" class="text-decoration-none">
-                      <i class="fas fa-file-pdf me-2 text-danger"></i> คู่มือ Scratch
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="text-decoration-none">
-                      <i class="fas fa-file-word me-2 text-primary"></i> ใบงานที่ 2
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="text-decoration-none">
-                      <i class="fas fa-file-powerpoint me-2 text-warning"></i> สไลด์การสอน
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section ที่ปรับปรุงใหม่ -->
+        <div class="card bg-light border-0 shadow-sm mb-5">
+          <div class="card-body text-center p-5">
+            <h2 class="mb-3"><i class="fas fa-rocket text-success me-2"></i>พร้อมเริ่มเรียนรู้แล้วหรือยัง?</h2>
+            <p class="lead mb-4">เลือกหัวข้อที่สนใจด้านบนเพื่อเริ่มต้นการเขียนโปรแกรมครั้งแรกของคุณ</p>
+            <a href="#lesson-cards" class="btn btn-success btn-lg px-4">
+              <i class="fas fa-play me-2"></i>เริ่มเรียนตอนนี้
+            </a>
           </div>
         </div>
       </main>
