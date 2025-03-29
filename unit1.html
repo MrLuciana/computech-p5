@@ -1,334 +1,359 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8">
-    <div id="head-content"></div>
-  </head>
-  <body>
-    <div id="navbar-content"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="head-content"></div>
+  <style>
+    /* สไตล์ที่ปรับปรุงใหม่ */
+    .hero-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      padding: 3rem 2rem;
+    }
+    
+    .hero-img-container {
+      position: relative;
+      overflow: hidden;
+      min-height: 250px;
+    }
+    
+    .hero-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 280px;
+      border-top-left-radius: 30px;
+      box-shadow: -5px 5px 20px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease;
+    }
+    
+    .hero-img:hover {
+      transform: scale(1.05);
+    }
+    
+    .lesson-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .lesson-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .lesson-img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+    
+    .lesson-card:hover .lesson-img {
+      transform: scale(1.05);
+    }
+    
+    .lesson-number {
+      width: 36px;
+      height: 36px;
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    
+    .resource-card {
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .resource-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 2rem 1rem;
+      }
+      
+      .hero-img {
+        position: relative;
+        max-height: 200px;
+        margin-top: 20px;
+        border-top-left-radius: 12px;
+      }
+      
+      .lesson-img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-content"></div>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div id="sidebar-content"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebar-content"></div>
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-          <div
-            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-          >
-            <h1 class="h2">หน่วยที่ 1: การใช้เหตุผลแก้ปัญหา</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <button
-                class="btn btn-sm btn-outline-secondary"
-                onclick="toggleDarkMode()"
-              >
-                <i class="fas fa-moon"></i> โหมดกลางคืน
-              </button>
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- Hero Section ที่ปรับปรุงใหม่ -->
+        <section class="hero-section mb-5">
+          <div class="row g-0">
+            <div class="col-lg-8 hero-content text-white">
+              <div class="d-flex align-items-center mb-3">
+                <div class="lesson-number">1</div>
+                <h1 class="fw-bold mb-0">การใช้เหตุผลแก้ปัญหา</h1>
+              </div>
+              <p class="lead mb-4">เรียนรู้กระบวนการคิดอย่างเป็นระบบเพื่อพัฒนาทักษะการแก้ปัญหาอย่างมีประสิทธิภาพ</p>
+              <div class="d-flex gap-3">
+                <a href="#lesson-cards" class="btn btn-light btn-lg px-4">
+                  <i class="fas fa-play me-2"></i>เริ่มศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 hero-img-container d-none d-lg-block">
+              <img src="images/lesson1.jpg" alt="การแก้ปัญหา" class="hero-img img-fluid">
             </div>
           </div>
+        </section>
 
-          <div class="alert alert-info fade-in">
-            <i class="fas fa-info-circle me-2"></i>
-            เนื้อหานี้เป็นส่วนหนึ่งของวิชาเทคโนโลยีวิทยาการคำนวณ
-            ชั้นประถมศึกษาปีที่ 5
+        <!-- Unit Info ที่ปรับปรุงใหม่ -->
+        <div class="card shadow-sm mb-5 border-0">
+          <div class="card-header bg-white border-0 pb-0">
+            <h3 class="mb-3"><i class="fas fa-info-circle text-primary me-2"></i>เกี่ยวกับหน่วยการเรียนรู้</h3>
           </div>
-
-          <div class="row">
-            <div class="col-lg-8">
-              <!-- เพิ่มหัวข้อบทเรียน -->
-              <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
-                  <i class="fas fa-book-open me-2"></i> เนื้อหาการเรียนรู้
-                </div>
-                <div class="card-body">
-                  <div class="lesson-tabs mb-4">
-                    <ul class="nav nav-tabs" id="lessonTabs" role="tablist">
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link active"
-                          id="problem-tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#problem"
-                          type="button"
-                          role="tab"
-                        >
-                          <i class="fas fa-question-circle me-1"></i>
-                          การแก้ปัญหา
-                        </button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link"
-                          id="solution-tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#solution"
-                          type="button"
-                          role="tab"
-                        >
-                          <i class="fas fa-lightbulb me-1"></i> วิธีแก้ปัญหา
-                        </button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button
-                          class="nav-link"
-                          id="computer-tab"
-                          data-bs-toggle="tab"
-                          data-bs-target="#computer"
-                          type="button"
-                          role="tab"
-                        >
-                          <i class="fas fa-laptop-code me-1"></i>
-                          การแก้ปัญหากับคอมพิวเตอร์
-                        </button>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="tab-content" id="lessonTabsContent">
-                    <!-- หัวข้อ 1: การแก้ปัญหา -->
-                    <div
-                      class="tab-pane fade show active"
-                      id="problem"
-                      role="tabpanel"
-                    >
-                      <h3>
-                        <i class="fas fa-question-circle text-primary me-2"></i
-                        >การแก้ปัญหา
-                      </h3>
-                      <div class="lesson-content">
-                        <p>
-                          การแก้ปัญหาเป็นกระบวนการสำคัญในการคิดเชิงคำนวณ
-                          โดยมีขั้นตอนหลักดังนี้:
-                        </p>
-                        <ol>
-                          <li>การระบุปัญหาให้ชัดเจน</li>
-                          <li>การวิเคราะห์สาเหตุของปัญหา</li>
-                          <li>การกำหนดเป้าหมายในการแก้ปัญหา</li>
-                        </ol>
-
-                        <div class="example-box p-3 mb-3 bg-light rounded">
-                          <h5>
-                            <i class="fas fa-star text-warning me-2"></i
-                            >รายละเอียด/เนื้อหา
-                          </h5>
-                          <p>
-                            การดำเนินชีวิตของคนเราต้องพบปัญหามากมาย
-                            หลายปัญหาที่พบสามารถแก้ปัญหาได้ด้วยตนเอง เช่น
-                            การลืมสิ่งของที่จะนำไปโรงเรียน
-                            การเดินทางไปโรงเรียนแล้วฝนตก
-                            อาจแก้ปัญหานี้ได้ด้วยการเขียนข้อความเตือนไว้ในตำแหน่งที่เห็นชัดเจนก่อนออกจากบ้าน
-                            บางปัญหานอกจากส่งผลต่อตัวเราแล้วยังส่งผลต่อผู้อื่นอีกด้วย
-                            เช่น การทิ้งขยะไม่เป็นที่
-                            โดยการแก้ปัญหานี้ได้ด้วยการเขียนป้ายเตือนให้ทิ้งขยะให้ลงถัง
-                          </p>
-                        </div>
-
-                        <div class="text-center my-4">
-                          <img
-                            src="images/problem-solving.jpg"
-                            alt="การแก้ปัญหา"
-                            class="img-fluid rounded"
-                            style="max-height: 300px"
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- หัวข้อ 2: วิธีแก้ปัญหา -->
-                    <div class="tab-pane fade" id="solution" role="tabpanel">
-                      <h3>
-                        <i class="fas fa-lightbulb text-warning me-2"></i
-                        >วิธีแก้ปัญหา
-                      </h3>
-                      <div class="lesson-content">
-                        <p>วิธีการแก้ปัญหาที่ดีควรมีลักษณะดังนี้:</p>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="card mb-3">
-                              <div class="card-header bg-success text-white">
-                                <i class="fas fa-check-circle me-2"></i>
-                                ลักษณะที่ดี
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                  เป็นขั้นตอนที่ชัดเจน
-                                </li>
-                                <li class="list-group-item">
-                                  สามารถทำตามได้ง่าย
-                                </li>
-                                <li class="list-group-item">
-                                  ใช้ทรัพยากรอย่างมีประสิทธิภาพ
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="card mb-3">
-                              <div class="card-header bg-danger text-white">
-                                <i class="fas fa-times-circle me-2"></i>
-                                สิ่งที่ควรหลีกเลี่ยง
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                  วิธีแก้ที่ซับซ้อนเกินไป
-                                </li>
-                                <li class="list-group-item">
-                                  ใช้เวลานานเกินจำเป็น
-                                </li>
-                                <li class="list-group-item">
-                                  ไม่สามารถแก้ปัญหาได้จริง
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="activity-box p-4 my-4 border rounded">
-                          <h5>
-                            <i class="fas fa-tasks text-primary me-2"></i
-                            >กิจกรรมฝึกคิด
-                          </h5>
-                          <p>ให้นักเรียนลองคิดวิธีแก้ปัญหาสถานการณ์ต่อไปนี้:</p>
-                          <p>
-                            "คุณมีหนังสือ 10 เล่ม แต่สามารถใส่กระเป๋าได้เพียง 5
-                            เล่มเท่านั้น จะทำอย่างไรดี?"
-                          </p>
-                          <textarea
-                            class="form-control mt-2"
-                            rows="3"
-                            placeholder="เขียนวิธีแก้ปัญหาของคุณที่นี่..."
-                          ></textarea>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- หัวข้อ 3: การแก้ปัญหากับคอมพิวเตอร์ -->
-                    <div class="tab-pane fade" id="computer" role="tabpanel">
-                      <h3>
-                        <i class="fas fa-laptop-code text-info me-2"></i
-                        >การแก้ปัญหากับคอมพิวเตอร์
-                      </h3>
-                      <div class="lesson-content">
-                        <p>คอมพิวเตอร์สามารถช่วยแก้ปัญหาได้โดย:</p>
-
-                        <div class="steps-container">
-                          <div class="step-card">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                              <h5>การเขียนโปรแกรม</h5>
-                              <p>
-                                สร้างชุดคำสั่งให้คอมพิวเตอร์ทำงานตามที่ต้องการ
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="step-card">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                              <h5>การใช้ซอฟต์แวร์</h5>
-                              <p>เลือกใช้โปรแกรมที่เหมาะสมกับปัญหา</p>
-                            </div>
-                          </div>
-
-                          <div class="step-card">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                              <h5>การประมวลผลข้อมูล</h5>
-                              <p>
-                                ใช้คอมพิวเตอร์ช่วยคิดคำนวณหรือวิเคราะห์ข้อมูล
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="video-container my-4">
-                          <div class="ratio ratio-16x9">
-                            <iframe
-                              src="https://www.youtube.com/embed/ตัวอย่าง"
-                              allowfullscreen
-                            ></iframe>
-                          </div>
-                          <p class="text-muted mt-2">
-                            วิดีโอตัวอย่างการแก้ปัญหาด้วยคอมพิวเตอร์
-                          </p>
-                        </div>
-
-                        <div class="alert alert-warning">
-                          <i class="fas fa-exclamation-triangle me-2"></i>
-                          จำไว้ว่าคอมพิวเตอร์เป็นเพียงเครื่องมือ
-                          ต้องอาศัยความคิดของมนุษย์ในการออกแบบวิธีแก้ปัญหา
-                        </div>
-                      </div>
-                    </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                <p class="mb-4">หน่วยที่ 1 นี้จะพัฒนาทักษะการคิดเชิงคำนวณในการแก้ปัญหา ครอบคลุมเนื้อหาเกี่ยวกับ:</p>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>กระบวนการวิเคราะห์และระบุปัญหา</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>การออกแบบวิธีแก้ปัญหาอย่างเป็นขั้นตอน</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>การใช้เทคโนโลยีช่วยในการแก้ปัญหา</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-light p-4 rounded-3 h-100">
+                  <h5 class="d-flex align-items-center mb-3">
+                    <i class="fas fa-clock text-primary me-2"></i>ระยะเวลาเรียน
+                  </h5>
+                  <p class="mb-4">ประมาณ 4 ชั่วโมง</p>
+                  
+                  <h5 class="d-flex align-items-center mb-3">
+                    <i class="fas fa-star text-primary me-2"></i>ระดับความยาก
+                  </h5>
+                  <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            <!-- ส่วนเสริมด้านข้าง -->
-            <div class="col-lg-4">
-              <div class="card mb-4">
-                <div class="card-header bg-success text-white">
-                  <i class="fas fa-tasks me-2"></i> แบบฝึกหัด
-                </div>
-                <div class="card-body">
-                  <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">
-                      <i class="fas fa-question-circle me-2"></i>
-                      แบบทดสอบก่อนเรียน
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                      <i class="fas fa-puzzle-piece me-2"></i> กิจกรรมที่ 1:
-                      การแยกส่วนปัญหา
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                      <i class="fas fa-project-diagram me-2"></i> กิจกรรมที่ 2:
-                      การหารูปแบบ
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">
-                      <i class="fas fa-clipboard-check me-2"></i>
-                      แบบทดสอบหลังเรียน
-                    </a>
-                  </div>
-                </div>
+        <!-- Lesson Cards ที่ปรับปรุงใหม่ -->
+        <h2 id="lesson-cards" class="mb-4 pb-2 border-bottom">
+          <i class="fas fa-book-open text-primary me-2"></i>หัวข้อการเรียนรู้
+        </h2>
+        
+        <div class="row g-4 mb-5">
+          <!-- Lesson 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson1.jpg" alt="การแก้ปัญหา" class="lesson-img w-100">
               </div>
-
-              <div class="card mb-4">
-                <div class="card-header bg-warning text-dark">
-                  <i class="fas fa-download me-2"></i> เอกสารประกอบ
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number">1</div>
+                  <h4 class="mb-0 text-primary">การแก้ปัญหา</h4>
                 </div>
-                <div class="card-body">
-                  <ul class="list-unstyled">
-                    <li class="mb-2">
-                      <a href="#" class="text-decoration-none">
-                        <i class="fas fa-file-pdf me-2 text-danger"></i>
-                        ใบความรู้ที่ 1.pdf
-                      </a>
-                    </li>
-                    <li class="mb-2">
-                      <a href="#" class="text-decoration-none">
-                        <i class="fas fa-file-word me-2 text-primary"></i>
-                        ใบงานที่ 1.docx
-                      </a>
-                    </li>
-                    <li class="mb-2">
-                      <a href="#" class="text-decoration-none">
-                        <i class="fas fa-file-powerpoint me-2 text-warning"></i>
-                        สไลด์ประกอบการสอน.pptx
-                      </a>
-                    </li>
-                  </ul>
+                <p class="text-muted small mb-3">พื้นฐานการเข้าใจปัญหาอย่างเป็นระบบ</p>
+                <p class="card-text">เรียนรู้กระบวนการระบุและวิเคราะห์ปัญหาอย่างเป็นระบบ ด้วยขั้นตอนที่ชัดเจน</p>
+                <a href="unit1-1.html" class="btn btn-outline-primary w-100 mt-3">
+                  <i class="fas fa-book-open me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lesson 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson1-2.jpg" alt="วิธีแก้ปัญหา" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #198754;">2</div>
+                  <h4 class="mb-0 text-success">วิธีแก้ปัญหา</h4>
+                </div>
+                <p class="text-muted small mb-3">การออกแบบแนวทางแก้ไขที่มีประสิทธิภาพ</p>
+                <p class="card-text">วิธีการออกแบบทางแก้ปัญหาอย่างสร้างสรรค์และประเมินผลลัพธ์ที่ได้</p>
+                <a href="unit1-2.html" class="btn btn-outline-success w-100 mt-3">
+                  <i class="fas fa-lightbulb me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lesson 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson1-3.jpg" alt="คอมพิวเตอร์แก้ปัญหา" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #0dcaf0;">3</div>
+                  <h4 class="mb-0 text-info">คอมพิวเตอร์แก้ปัญหา</h4>
+                </div>
+                <p class="text-muted small mb-3">เทคโนโลยีช่วยแก้ปัญหาที่ซับซ้อน</p>
+                <p class="card-text">วิธีการใช้คอมพิวเตอร์และโปรแกรมต่างๆ เป็นเครื่องมือช่วยแก้ปัญหา</p>
+                <a href="unit1-3.html" class="btn btn-outline-info w-100 mt-3">
+                  <i class="fas fa-laptop-code me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Section ที่ปรับปรุงใหม่ -->
+        <div class="row mb-5">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <div class="card resource-card h-100">
+              <div class="card-header bg-white border-0">
+                <h3 class="mb-0"><i class="fas fa-graduation-cap text-primary me-2"></i>วิธีการเรียนให้มีประสิทธิภาพ</h3>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-check-circle fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">เรียนตามลำดับ</h5>
+                        <p class="mb-0 text-muted">ศึกษาเนื้อหาตามลำดับจากหัวข้อ 1 ถึง 3 เพื่อความเข้าใจที่ต่อเนื่อง</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-tasks fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">ทำกิจกรรมประกอบ</h5>
+                        <p class="mb-0 text-muted">ฝึกปฏิบัติตามกิจกรรมในแต่ละบท เพื่อเสริมความเข้าใจ</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-question-circle fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">ทดสอบความเข้าใจ</h5>
+                        <p class="mb-0 text-muted">ทำแบบทดสอบหลังเรียนเพื่อประเมินความรู้ของตัวเอง</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-users fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">เรียนรู้ร่วมกัน</h5>
+                        <p class="mb-0 text-muted">ปรึกษาและแบ่งปันความรู้กับเพื่อนในชั้นเรียน</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </main>
-      </div>
+          
+          <div class="col-lg-4">
+            <div class="card resource-card h-100">
+              <div class="card-header bg-white border-0">
+                <h3 class="mb-0"><i class="fas fa-download text-primary me-2"></i>เอกสารประกอบการเรียน</h3>
+              </div>
+              <div class="card-body">
+                <div class="list-group list-group-flush">
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-pdf fa-lg text-danger resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">เอกสารประกอบหน่วยที่ 1</h6>
+                        <small class="text-muted">PDF • 15 หน้า</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-word fa-lg text-success resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">แบบฝึกหัดทั้งหมด</h6>
+                        <small class="text-muted">DOCX • 10 แบบฝึกหัด</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-powerpoint fa-lg text-warning resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">สไลด์การสอนเต็มหน่วย</h6>
+                        <small class="text-muted">PPTX • 45 สไลด์</small>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-link fa-lg text-info resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">แหล่งเรียนรู้เพิ่มเติม</h6>
+                        <small class="text-muted">รวมลิงก์น่าสนใจ</small>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section ที่ปรับปรุงใหม่ -->
+        <div class="card bg-light border-0 shadow-sm mb-5">
+          <div class="card-body text-center p-5">
+            <h2 class="mb-3"><i class="fas fa-rocket text-primary me-2"></i>พร้อมเริ่มเรียนรู้แล้วหรือยัง?</h2>
+            <p class="lead mb-4">เลือกหัวข้อที่สนใจด้านบนเพื่อเริ่มต้นการพัฒนาทักษะการแก้ปัญหาของคุณ</p>
+            <a href="#lesson-cards" class="btn btn-primary btn-lg px-4">
+              <i class="fas fa-play me-2"></i>เริ่มเรียนตอนนี้
+            </a>
+          </div>
+        </div>
+      </main>
     </div>
+  </div>
 
-    <div id="footer-content"></div>
+  <div id="footer-content"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>
