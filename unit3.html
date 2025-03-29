@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <div id="head-content"></div>
+</head>
+<body>
+  <div id="navbar-content"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebar-content"></div>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">หน่วยที่ 3: การค้นหาข้อมูล</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+            <button class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
+              <i class="fas fa-moon"></i> โหมดกลางคืน
+            </button>
+          </div>
+        </div>
+        
+        <div class="alert alert-info fade-in">
+          <i class="fas fa-info-circle me-2"></i> เรียนรู้เกี่ยวกับการใช้งานอินเทอร์เน็ตและการสื่อสารออนไลน์
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card mb-4">
+              <div class="card-header bg-primary text-white">
+                <i class="fas fa-search me-2"></i> เนื้อหาการเรียนรู้
+              </div>
+              <div class="card-body">
+                <div class="lesson-tabs mb-4">
+                  <ul class="nav nav-tabs" id="lessonTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="network-tab" data-bs-toggle="tab" data-bs-target="#network" type="button" role="tab">
+                        <i class="fas fa-network-wired me-1"></i> เครือข่ายคอมพิวเตอร์
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="search-tab" data-bs-toggle="tab" data-bs-target="#search" type="button" role="tab">
+                        <i class="fas fa-search me-1"></i> การค้นหาข้อมูล
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="communication-tab" data-bs-toggle="tab" data-bs-target="#communication" type="button" role="tab">
+                        <i class="fas fa-comments me-1"></i> การติดต่อสื่อสาร
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="email-tab" data-bs-toggle="tab" data-bs-target="#email" type="button" role="tab">
+                        <i class="fas fa-envelope me-1"></i> จดหมายอิเล็กทรอนิกส์
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="social-tab" data-bs-toggle="tab" data-bs-target="#social" type="button" role="tab">
+                        <i class="fas fa-share-alt me-1"></i> สื่อสังคมออนไลน์
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="tab-content" id="lessonTabsContent">
+                  <!-- หัวข้อ 1: เครือข่ายคอมพิวเตอร์ -->
+                  <div class="tab-pane fade show active" id="network" role="tabpanel">
+                    <h3><i class="fas fa-network-wired text-primary me-2"></i>เครือข่ายคอมพิวเตอร์</h3>
+                    <div class="lesson-content">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h5><i class="fas fa-wifi me-2"></i> ประเภทของเครือข่าย</h5>
+                          <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-home"></i></span>LAN (เครือข่ายท้องถิ่น)</li>
+                            <li><span class="fa-li"><i class="fas fa-globe"></i></span>WAN (เครือข่ายระยะไกล)</li>
+                            <li><span class="fa-li"><i class="fas fa-cloud"></i></span>อินเทอร์เน็ต</li>
+                          </ul>
+                          
+                          <div class="mt-4">
+                            <h5><i class="fas fa-shield-alt me-2"></i> ความปลอดภัยพื้นฐาน</h5>
+                            <ul>
+                              <li>ใช้รหัสผ่านที่แข็งแรง</li>
+                              <li>อัปเดตซอฟต์แวร์เป็นประจำ</li>
+                              <li>ระวังการเชื่อมต่อ Wi-Fi สาธารณะ</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="text-center">
+                            <img src="images/network-types.png" alt="ประเภทเครือข่าย" class="img-fluid rounded" style="max-height: 250px;">
+                            <p class="text-muted mt-2">ตัวอย่างโครงสร้างเครือข่ายคอมพิวเตอร์</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- หัวข้อ 2: การค้นหาข้อมูล -->
+                  <div class="tab-pane fade" id="search" role="tabpanel">
+                    <h3><i class="fas fa-search text-info me-2"></i>การค้นหาข้อมูล</h3>
+                    <div class="lesson-content">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="card mb-3">
+                            <div class="card-header bg-info text-white">
+                              <i class="fas fa-google me-2"></i> เครื่องมือค้นหา
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">Google</li>
+                              <li class="list-group-item">Bing</li>
+                              <li class="list-group-item">Yahoo</li>
+                              <li class="list-group-item">DuckDuckGo</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card mb-3">
+                            <div class="card-header bg-success text-white">
+                              <i class="fas fa-lightbulb me-2"></i> เทคนิคการค้นหา
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">ใช้คำสำคัญที่เฉพาะเจาะจง</li>
+                              <li class="list-group-item">ใช้เครื่องหมายคำพูด ("")</li>
+                              <li class="list-group-item">ใช้เครื่องหมายลบ (-) เพื่อตัดคำที่ไม่ต้องการ</li>
+                              <li class="list-group-item">ใช้ site: เพื่อค้นหาในเว็บไซต์เฉพาะ</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="activity-box p-4 my-4 border rounded bg-light">
+                        <h5><i class="fas fa-tasks text-primary me-2"></i> กิจกรรมฝึกค้นหา</h5>
+                        <p>จงใช้เครื่องมือค้นหาหาคำตอบสำหรับคำถามต่อไปนี้:</p>
+                        <ol>
+                          <li>จังหวัดใดมีประชากรมากที่สุดในประเทศไทย?</li>
+                          <li>อาหารประจำชาติไทยคืออะไร?</li>
+                          <li>วันเด็กแห่งชาติปีนี้ตรงกับวันที่เท่าไร?</li>
+                        </ol>
+                        <textarea class="form-control mt-2" rows="3" placeholder="เขียนคำตอบของคุณที่นี่..."></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- หัวข้อ 3: การติดต่อสื่อสารผ่านอินเทอร์เน็ต -->
+                  <div class="tab-pane fade" id="communication" role="tabpanel">
+                    <h3><i class="fas fa-comments text-warning me-2"></i>การติดต่อสื่อสารผ่านอินเทอร์เน็ต</h3>
+                    <div class="lesson-content">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h5><i class="fas fa-comment-dots me-2"></i> แอปพลิเคชันสำหรับสนทนา</h5>
+                          <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-primary">LINE</span>
+                            <span class="badge bg-success">WhatsApp</span>
+                            <span class="badge bg-info">Messenger</span>
+                            <span class="badge bg-danger">WeChat</span>
+                            <span class="badge bg-dark">Telegram</span>
+                          </div>
+                          
+                          <h5 class="mt-4"><i class="fas fa-video me-2"></i> การประชุมออนไลน์</h5>
+                          <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>Zoom</li>
+                            <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>Google Meet</li>
+                            <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>Microsoft Teams</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-header bg-primary text-white">
+                              <i class="fas fa-user-shield me-2"></i> มารยาทในการสื่อสารออนไลน์
+                            </div>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">ใช้ภาษาที่เหมาะสม</li>
+                              <li class="list-group-item">ไม่ส่งข้อความหรือโทรโดยไม่จำเป็นเวลากลางคืน</li>
+                              <li class="list-group-item">ไม่ส่งต่อข้อมูลที่ไม่แน่ใจว่าเป็นความจริง</li>
+                              <li class="list-group-item">เคารพความเป็นส่วนตัวของผู้อื่น</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- หัวข้อ 4: การส่งจดหมายผ่านอิเล็กทรอนิกส์ -->
+                  <div class="tab-pane fade" id="email" role="tabpanel">
+                    <h3><i class="fas fa-envelope text-danger me-2"></i>การส่งจดหมายอิเล็กทรอนิกส์</h3>
+                    <div class="lesson-content">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h5><i class="fas fa-at me-2"></i> ส่วนประกอบของอีเมล</h5>
+                          <div class="card mb-3">
+                            <div class="card-body">
+                              <div class="mb-3">
+                                <label class="form-label">ถึง:</label>
+                                <input type="text" class="form-control" placeholder="recipient@example.com">
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">เรื่อง:</label>
+                                <input type="text" class="form-control" placeholder="หัวข้อจดหมาย">
+                              </div>
+                              <div class="mb-3">
+                                <label class="form-label">เนื้อหา:</label>
+                                <textarea class="form-control" rows="5"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <h5><i class="fas fa-inbox me-2"></i> บริการอีเมลยอดนิยม</h5>
+                          <div class="row">
+                            <div class="col-6 mb-3">
+                              <div class="card h-100">
+                                <div class="card-body text-center">
+                                  <i class="fas fa-envelope fa-3x text-danger mb-3"></i>
+                                  <h6>Gmail</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                              <div class="card h-100">
+                                <div class="card-body text-center">
+                                  <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                                  <h6>Outlook</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                              <div class="card h-100">
+                                <div class="card-body text-center">
+                                  <i class="fas fa-envelope fa-3x text-warning mb-3"></i>
+                                  <h6>Yahoo Mail</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                              <div class="card h-100">
+                                <div class="card-body text-center">
+                                  <i class="fas fa-envelope fa-3x text-info mb-3"></i>
+                                  <h6>iCloud Mail</h6>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- หัวข้อ 5: การสื่อสารผ่านสังคมออนไลน์ -->
+                  <div class="tab-pane fade" id="social" role="tabpanel">
+                    <h3><i class="fas fa-share-alt text-success me-2"></i>การสื่อสารผ่านสังคมออนไลน์</h3>
+                    <div class="lesson-content">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h5><i class="fas fa-thumbs-up me-2"></i> แพลตฟอร์มยอดนิยม</h5>
+                          <div class="social-platforms">
+                            <div class="platform-card">
+                              <div class="platform-icon bg-facebook">
+                                <i class="fab fa-facebook-f"></i>
+                              </div>
+                              <div class="platform-info">
+                                <h6>Facebook</h6>
+                                <small>สำหรับการติดต่อสื่อสารและแบ่งปันเนื้อหา</small>
+                              </div>
+                            </div>
+                            
+                            <div class="platform-card">
+                              <div class="platform-icon bg-instagram">
+                                <i class="fab fa-instagram"></i>
+                              </div>
+                              <div class="platform-info">
+                                <h6>Instagram</h6>
+                                <small>สำหรับแบ่งปันรูปภาพและวิดีโอ</small>
+                              </div>
+                            </div>
+                            
+                            <div class="platform-card">
+                              <div class="platform-icon bg-twitter">
+                                <i class="fab fa-twitter"></i>
+                              </div>
+                              <div class="platform-info">
+                                <h6>Twitter</h6>
+                                <small>สำหรับการเผยแพร่ข้อความสั้น</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-header bg-warning text-dark">
+                              <i class="fas fa-exclamation-triangle me-2"></i> ข้อควรระวัง
+                            </div>
+                            <div class="card-body">
+                              <ul>
+                                <li>ไม่เปิดเผยข้อมูลส่วนตัวมากเกินไป</li>
+                                <li>ตรวจสอบแหล่งที่มาของข้อมูลก่อนแชร์</li>
+                                <li>ระวังการพูดคุยกับคนแปลกหน้า</li>
+                                <li>ตั้งค่าความเป็นส่วนตัวให้เหมาะสม</li>
+                              </ul>
+                              
+                              <div class="alert alert-danger mt-3">
+                                <i class="fas fa-bullhorn me-2"></i>
+                                อย่าลืมว่าเนื้อหาที่โพสต์บนอินเทอร์เน็ตอาจอยู่ตลอดไป
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- ส่วนเสริมด้านข้าง -->
+          <div class="col-lg-4">
+            <div class="card mb-4">
+              <div class="card-header bg-success text-white">
+                <i class="fas fa-tasks me-2"></i> แบบฝึกหัด
+              </div>
+              <div class="card-body">
+                <div class="list-group">
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-question-circle me-2"></i> แบบทดสอบก่อนเรียน
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-search me-2"></i> กิจกรรมการค้นหาข้อมูล
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-envelope me-2"></i> ส่งอีเมลถึงครู
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-clipboard-check me-2"></i> แบบทดสอบหลังเรียน
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card mb-4">
+              <div class="card-header bg-warning text-dark">
+                <i class="fas fa-download me-2"></i> เอกสารประกอบ
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <a href="#" class="text-decoration-none">
+                      <i class="fas fa-file-pdf me-2 text-danger"></i> คู่มือการใช้อีเมล
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-decoration-none">
+                      <i class="fas fa-file-word me-2 text-primary"></i> ใบงานที่ 3
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="#" class="text-decoration-none">
+                      <i class="fas fa-file-powerpoint me-2 text-warning"></i> สไลด์การสอน
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="footer-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

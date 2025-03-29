@@ -1,0 +1,94 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container-fluid">
+    <!-- ปุ่ม Toggle Sidebar -->
+    <button class="btn btn-link text-white me-2" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Logo และชื่อเว็บ -->
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-laptop-code me-2"></i>วิทยาการคำนวณ ป.5
+    </a>
+    
+    <!-- ปุ่ม Toggle สำหรับ Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- ส่วนเมนูหลัก -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home me-1"></i> หน้าแรก
+          </a>
+        </li>
+        
+        <!-- Dropdown แบบทดสอบก่อนเรียน -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pretestDropdown" role="button" data-bs-toggle="dropdown">
+            <i class="fas fa-question-circle me-1"></i> แบบทดสอบก่อนเรียน
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="pretest-unit1.html">
+                <i class="fas fa-robot me-2"></i> หน่วยที่ 1: การใช้เหตุผลแก้ปัญหา
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="pretest-unit2.html">
+                <i class="fas fa-code me-2"></i> หน่วยที่ 2: การเขียนโปรแกรม
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="pretest-unit3.html">
+                <i class="fas fa-shield-alt me-2"></i> หน่วยที่ 3: การค้นหาข้อมูล
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="pretest-unit4.html">
+                <i class="fas fa-globe me-2"></i> หน่วยที่ 4: การใช้บริการอินเทอร์เน็ต
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- เมนูหน่วยการเรียนรู้ -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="unitsDropdown" role="button" data-bs-toggle="dropdown">
+            <i class="fas fa-book-open me-1"></i> หน่วยการเรียนรู้
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="unit1.html">
+                <i class="fas fa-robot me-2"></i> หน่วยที่ 1: การใช้เหตุผลแก้ปัญหา
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="unit2.html">
+                <i class="fas fa-code me-2"></i> หน่วยที่ 2: การเขียนโปรแกรม
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="unit3.html">
+                <i class="fas fa-shield-alt me-2"></i> หน่วยที่ 3: การค้นหาข้อมูล
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="unit4.html">
+                <i class="fas fa-globe me-2"></i> หน่วยที่ 4: การใช้บริการอินเทอร์เน็ต
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <!-- ส่วนด้านขวา -->
+      <div class="d-flex">
+        <button class="btn btn-outline-light me-2" onclick="toggleDarkMode()">
+          <i class="fas fa-moon me-1"></i> โหมดกลางคืน
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

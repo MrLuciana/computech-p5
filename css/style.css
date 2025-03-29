@@ -1,0 +1,705 @@
+/* ตัวแปรสี */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --info-color: #0dcaf0;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+  }
+  
+  /* โหมดสีเข้ม */
+  .dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .card,
+  .dark-mode .sidebar {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .navbar,
+  .dark-mode .footer {
+    background-color: #1a1a1a !important;
+  }
+  
+  /* ฟอนต์ */
+  body {
+    font-family: 'Prompt', sans-serif;
+    padding-top: 56px;
+  }
+  
+  /* การ์ดเนื้อหา */
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid #eee;
+  }
+  
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 2px 10px;
+  }
+  
+  .sidebar .nav-link:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+  }
+  
+  .sidebar .nav-link.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Sidebar ปรับแต่งใหม่ */
+.sidebar {
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sidebar-logo {
+  transition: transform 0.3s;
+}
+
+.sidebar-logo:hover {
+  transform: rotate(10deg);
+}
+
+.sidebar-title {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.sidebar-divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0.5rem 0;
+}
+
+.nav-link {
+  border-radius: 0.25rem;
+  margin: 0.1rem 0;
+  padding: 0.5rem 1rem;
+  color: #495057;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  background-color: var(--primary-color);
+  color: white !important;
+}
+
+.sidebar-section-title {
+  font-weight: 500;
+  color: #212529 !important;
+}
+
+.sidebar-chevron {
+  transition: transform 0.3s;
+}
+
+[data-bs-toggle="collapse"].collapsed .sidebar-chevron {
+  transform: rotate(-90deg);
+}
+
+/* Dark Mode สำหรับ Sidebar */
+.dark-mode .sidebar {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .nav-link {
+  color: #e0e0e0;
+}
+
+.dark-mode .nav-link:hover {
+  background-color: rgba(13, 110, 253, 0.2);
+}
+
+.dark-mode .sidebar-section-title {
+  color: #f8f9fa !important;
+}
+
+.dark-mode .sidebar-divider {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sidebar Animation */
+.sidebar {
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out;
+}
+
+/* เมื่อ sidebar ซ่อน */
+.sidebar-collapsed {
+  transform: translateX(-100%);
+  margin-left: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .sidebar-collapsed {
+    transform: translateX(-100%);
+    margin-left: -25% !important;
+  }
+  
+  main {
+    transition: margin 0.3s ease-in-out;
+  }
+  
+  .sidebar-expanded ~ main {
+    margin-left: 25%;
+  }
+}
+
+/* ปรับปุ่ม toggle */
+#sidebarToggle {
+  transition: transform 0.3s ease;
+}
+
+.sidebar-collapsed + #sidebarToggle {
+  transform: rotate(90deg);
+}
+
+
+  /* เนื้อหาหลัก */
+  main {
+    padding: 20px 0;
+  }
+  
+  /* ปุ่ม */
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .sidebar {
+      position: static;
+      height: auto;
+      margin-top: 20px;
+    }
+    
+    main {
+      padding-top: 0;
+    }
+  }
+  
+  /* อนิเมชัน */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  /* โครงสร้างหลัก */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar ปกติ */
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  transition: all 0.3s ease;
+}
+
+/* เนื้อหาหลัก */
+main {
+  width: calc(100% - 250px);
+  transition: all 0.3s ease;
+}
+
+/* เมื่อซ่อน Sidebar */
+.sidebar-collapsed {
+  transform: translateX(-100%);
+  margin-left: -250px;
+}
+
+.sidebar-collapsed + main {
+  width: 100%;
+  margin-left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+  }
+  
+  main {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .sidebar:not(.sidebar-collapsed) {
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-collapsed {
+    margin-left: -250px;
+  }
+}
+
+/* สไตล์สำหรับแท็บเนื้อหา */
+.lesson-tabs {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+  color: #495057;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: var(--primary-color);
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+/* สไตล์เนื้อหาบทเรียน */
+.lesson-content {
+  padding: 1rem 0;
+}
+
+.example-box {
+  border-left: 4px solid var(--primary-color);
+}
+
+.activity-box {
+  background-color: rgba(13, 110, 253, 0.05);
+  border-left: 4px solid var(--info-color);
+}
+
+/* สไตล์ขั้นตอนการแก้ปัญหา */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h5 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .nav-tabs .nav-link {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+  
+  .step-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* สไตล์แท็บเนื้อหา */
+.nav-tabs .nav-link {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  padding: 0.75rem 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .nav-tabs .nav-link {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* สไตล์เนื้อหาบทเรียน */
+.lesson-content {
+  padding: 1rem 0;
+}
+
+/* สไตล์ตัวอย่างโค้ด */
+pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #d63384;
+}
+
+/* สไตล์ตาราง */
+.table {
+  font-size: 0.9rem;
+}
+
+.table th {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+/* สไตล์การ์ด */
+.card {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* สไตล์รูปภาพ */
+.img-fluid {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* สไตล์ปุ่ม */
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .nav-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 1px;
+  }
+  
+  .nav-tabs .nav-link {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  .img-fluid {
+    max-height: 150px;
+  }
+}
+
+/* สไตล์แท็บเนื้อหา */
+.nav-tabs .nav-link {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .nav-tabs .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* สไตล์โซเชียลมีเดีย */
+.social-platforms {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.platform-card {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.platform-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+}
+
+.bg-facebook { background-color: #3b5998; }
+.bg-instagram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+.bg-twitter { background-color: #1da1f2; }
+
+.platform-info h6 {
+  margin-bottom: 0.25rem;
+  color: var(--dark-color);
+}
+
+.platform-info small {
+  color: #6c757d;
+  font-size: 0.75rem;
+}
+
+/* สไตล์กิจกรรม */
+.activity-box {
+  border-left: 4px solid var(--info-color);
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* สไตล์บัตรแพลตฟอร์ม */
+.badge {
+  font-weight: normal;
+  padding: 0.5em 0.75em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .nav-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 1px;
+  }
+  
+  .platform-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .platform-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* สไตล์การ์ดบริการ */
+.service-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card i {
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+  transform: scale(1.1);
+}
+
+/* สไตล์เคล็ดลับความปลอดภัย */
+.safety-tips {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tip-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tip-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  color: white;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.tip-content h5 {
+  color: var(--dark-color);
+  margin-bottom: 0.25rem;
+}
+
+.tip-content p {
+  color: #6c757d;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* สไตล์แบบฟอร์มสำรวจ */
+.form-check {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .safety-tips {
+    gap: 0.75rem;
+  }
+  
+  .tip-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  
+  .tip-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card {
+    padding: 0.75rem;
+  }
+}
+
+/* สไตล์สำหรับแบบทดสอบ */
+.pretest-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pretest-question {
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1rem;
+}
+
+.pretest-options {
+  margin-top: 1rem;
+}
+
+.form-check {
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
+}
+
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.2em;
+}
+
+.form-check-label {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* สไตล์ปุ่มส่งคำตอบ */
+.btn-submit-pretest {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+/* สไตล์สำหรับผลลัพธ์ */
+.pretest-result {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pretest-score {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .pretest-question {
+    padding-left: 0.5rem;
+  }
+  
+  .form-check {
+    padding-left: 1.5rem;
+  }
+}

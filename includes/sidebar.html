@@ -1,0 +1,102 @@
+<nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+  <div class="position-sticky pt-3">
+    <!-- ส่วนหัว Sidebar -->
+    <div class="sidebar-header text-center mb-4">
+      <img src="images/logo.png" alt="โลโก้โรงเรียน" class="sidebar-logo mb-2" width="80">
+      <h5 class="sidebar-title">วิทยาการคำนวณ ป.5</h5>
+      <hr class="sidebar-divider">
+    </div>
+
+    <!-- เมนูหลัก -->
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-home fa-fw me-2"></i>
+          <span>หน้าแรก</span>
+        </a>
+      </li>
+      
+      <!-- หน่วยการเรียนรู้ -->
+      <li class="nav-item mt-2">
+        <a class="nav-link sidebar-section-title" data-bs-toggle="collapse" href="#unitsCollapse">
+          <i class="fas fa-book-open fa-fw me-2"></i>
+          <span>หน่วยการเรียนรู้</span>
+          <i class="fas fa-chevron-down float-end mt-1 sidebar-chevron"></i>
+        </a>
+        <div class="collapse show" id="unitsCollapse">
+          <ul class="nav flex-column ms-4">
+            <li class="nav-item">
+              <a class="nav-link" href="unit1.html">
+                <i class="fas fa-robot fa-fw me-2"></i>
+                <span>หน่วยที่ 1: การใช้เหตุผลแก้ปัญหา</span>
+                <!-- <span class="badge bg-success rounded-pill float-end">ใหม่</span> -->
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="unit2.html">
+                <i class="fas fa-code fa-fw me-2"></i>
+                <span>หน่วยที่ 2: การเขียนโปรแกรม</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="unit3.html">
+                <i class="fas fa-shield-alt fa-fw me-2"></i>
+                <span>หน่วยที่ 3: การค้นหาข้อมูล</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="unit4.html">
+                <i class="fas fa-chart-line fa-fw me-2"></i>
+                <span>หน่วยที่ 4: การใช้บริการอินเทอร์เน็ต</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- แบบฝึกหัด -->
+      <li class="nav-item mt-2">
+        <a class="nav-link sidebar-section-title" data-bs-toggle="collapse" href="#exercisesCollapse">
+          <i class="fas fa-tasks fa-fw me-2"></i>
+          <span>แบบฝึกหัด</span>
+          <i class="fas fa-chevron-down float-end mt-1 sidebar-chevron"></i>
+        </a>
+        <div class="collapse show" id="exercisesCollapse">
+          <ul class="nav flex-column ms-4">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-question-circle fa-fw me-2"></i>
+                <span>แบบทดสอบก่อนเรียน</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-puzzle-piece fa-fw me-2"></i>
+                <span>แบบฝึกหัดประจำหน่วย</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-clipboard-check fa-fw me-2"></i>
+                <span>แบบทดสอบหลังเรียน</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <!-- ส่วนท้าย Sidebar -->
+    <div class="sidebar-footer mt-auto pt-3">
+      <hr class="sidebar-divider">
+      <div class="d-grid gap-2">
+        <button class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
+          <i class="fas fa-moon me-1"></i> โหมดกลางคืน
+        </button>
+        <a href="#" class="btn btn-sm btn-outline-primary">
+          <i class="fas fa-question-circle me-1"></i> ความช่วยเหลือ
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
