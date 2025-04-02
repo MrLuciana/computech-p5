@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="head-content"></div>
+  <style>
+    /* สไตล์เฉพาะสำหรับบทเรียนแบบสำรวจออนไลน์ */
+    .lesson-header {
+      background: linear-gradient(135deg, #198754 0%, #0f5132 100%);
+      border-radius: 12px;
+      color: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .tool-card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .tool-card.google {
+      border-left: 5px solid #4285F4;
+    }
+    
+    .tool-card.monkey {
+      border-left: 5px solid #FF5722;
+    }
+    
+    .tool-card.typeform {
+      border-left: 5px solid #5B3E8A;
+    }
+    
+    .tool-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .design-tips {
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 5px solid #ffc107;
+    }
+    
+    .question-card {
+      text-align: center;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .question-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .question-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .activity-card {
+      border-radius: 12px;
+      border-left: 5px solid #0dcaf0;
+      background-color: rgba(13, 202, 240, 0.05);
+    }
+    
+    @media (max-width: 768px) {
+      .lesson-header {
+        padding: 1.5rem;
+      }
+      
+      .tool-icon {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-content"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebar-content"></div>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- ส่วนหัวบทเรียน -->
+        <section class="lesson-header">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="d-flex align-items-center mb-3">
+                <h1 class="mb-0">แบบสำรวจออนไลน์</h1>
+              </div>
+              <p class="lead mb-0">เรียนรู้การสร้างและใช้งานแบบสำรวจออนไลน์อย่างมืออาชีพ</p>
+            </div>
+            <div class="col-md-4 d-none d-md-block text-center">
+              <i class="fas fa-poll fa-4x" style="opacity: 0.8;"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- เครื่องมือสร้างแบบสำรวจ -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-tools text-success me-2"></i>เครื่องมือสร้างแบบสำรวจออนไลน์</h3>
+          </div>
+          <div class="card-body">
+            <div class="row g-4">
+              <!-- Google Forms -->
+              <div class="col-md-4">
+                <div class="tool-card google p-4 h-100">
+                  <div class="tool-icon text-center text-primary">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <h4 class="text-center">Google Forms</h4>
+                  <p class="text-center">เครื่องมือสร้างแบบสำรวจฟรีจาก Google</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ใช้งานง่าย</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>วิเคราะห์ผลอัตโนมัติ</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>เชื่อมต่อกับ Google Sheets</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- SurveyMonkey -->
+              <div class="col-md-4">
+                <div class="tool-card monkey p-4 h-100">
+                  <div class="tool-icon text-center text-danger">
+                    <i class="fas fa-poll"></i>
+                  </div>
+                  <h4 class="text-center">SurveyMonkey</h4>
+                  <p class="text-center">แพลตฟอร์มแบบสำรวจออนไลน์มืออาชีพ</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>เทมเพลตสำเร็จรูป</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>การวิเคราะห์ขั้นสูง</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>รองรับหลายภาษา</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Typeform -->
+              <div class="col-md-4">
+                <div class="tool-card typeform p-4 h-100">
+                  <div class="tool-icon text-center text-info">
+                    <i class="fas fa-keyboard"></i>
+                  </div>
+                  <h4 class="text-center">Typeform</h4>
+                  <p class="text-center">เครื่องมือสร้างแบบฟอร์มสมัยใหม่</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-info"></i></span>การออกแบบที่สวยงาม</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-info"></i></span>ประสบการณ์ผู้ใช้ดี</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-info"></i></span>เชื่อมต่อกับเครื่องมืออื่นๆ</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- การออกแบบแบบสำรวจ -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-pencil-ruler text-success me-2"></i>การออกแบบแบบสำรวจที่ดี</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h4><i class="fas fa-check-circle text-success me-2"></i>หลักการออกแบบคำถาม</h4>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>คำถามชัดเจน เข้าใจง่าย</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>เรียงลำดับจากง่ายไปยาก</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>หลีกเลี่ยงคำถามนำ</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ใช้ภาษาที่เหมาะสมกับกลุ่มเป้าหมาย</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="design-tips">
+                  <h4><i class="fas fa-lightbulb text-warning me-2"></i>เทคนิคการออกแบบ</h4>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>แบ่งแบบสำรวจเป็นส่วนๆ</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>ใช้คำถามที่จำเป็นเท่านั้น</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>ให้ตัวเลือกที่ครอบคลุม</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>มีคำถามปลายเปิดบ้าง</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ประเภทคำถาม -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-question-circle text-success me-2"></i>ประเภทคำถามในแบบสำรวจ</h3>
+          </div>
+          <div class="card-body">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="question-card">
+                  <div class="question-icon text-primary">
+                    <i class="far fa-dot-circle"></i>
+                  </div>
+                  <h5>เลือกตอบเดียว</h5>
+                  <p>เหมาะสำหรับคำถามที่มีคำตอบเดียวที่ถูกต้อง</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="question-card">
+                  <div class="question-icon text-success">
+                    <i class="far fa-check-square"></i>
+                  </div>
+                  <h5>เลือกหลายคำตอบ</h5>
+                  <p>เมื่อต้องการให้เลือกได้มากกว่า 1 คำตอบ</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="question-card">
+                  <div class="question-icon text-warning">
+                    <i class="fas fa-align-left"></i>
+                  </div>
+                  <h5>คำถามปลายเปิด</h5>
+                  <p>เมื่อต้องการความคิดเห็นโดยละเอียด</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="question-card">
+                  <div class="question-icon text-danger">
+                    <i class="fas fa-sliders-h"></i>
+                  </div>
+                  <h5>ระดับความพึงพอใจ</h5>
+                  <p>วัดระดับความคิดเห็นเป็นช่วงค่า</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="alert alert-success mt-4">
+              <i class="fas fa-info-circle me-2"></i>
+              การผสมผสานประเภทคำถามที่หลากหลายจะช่วยให้ได้ข้อมูลที่ครบถ้วน
+            </div>
+          </div>
+        </div>
+
+        <!-- กิจกรรมการเรียนรู้ -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-tasks text-success me-2"></i>กิจกรรมการเรียนรู้</h3>
+          </div>
+          <div class="card-body">
+            <div class="activity-card p-4 mb-4">
+              <h4><i class="fas fa-edit text-info me-2"></i>กิจกรรมที่ 1: ออกแบบแบบสำรวจ</h4>
+              <p>ให้นักเรียนออกแบบแบบสำรวจออนไลน์เกี่ยวกับ "พฤติกรรมการใช้อินเทอร์เน็ตของนักเรียน" โดยมีองค์ประกอบต่อไปนี้:</p>
+              <ol>
+                <li>คำถามส่วนตัวพื้นฐาน (2 คำถาม)</li>
+                <li>คำถามเกี่ยวกับความถี่ในการใช้งาน (1 คำถาม)</li>
+                <li>คำถามเกี่ยวกับประเภทบริการที่ใช้ (1 คำถามเลือกหลายตัวเลือก)</li>
+                <li>คำถามปลายเปิดเกี่ยวกับประโยชน์ที่ได้รับ (1 คำถาม)</li>
+              </ol>
+            </div>
+            
+            <div class="activity-card p-4">
+              <h4><i class="fas fa-poll text-info me-2"></i>กิจกรรมที่ 2: สร้างแบบสำรวจจริง</h4>
+              <p>ให้นักเรียนเลือกเครื่องมือหนึ่งในการสร้างแบบสำรวจตามที่ออกแบบไว้ และส่งลิงก์แบบสำรวจให้เพื่อนในชั้นเรียนตอบ</p>
+              <div class="input-group mt-3">
+                <span class="input-group-text">ลิงก์แบบสำรวจของฉัน</span>
+                <input type="text" class="form-control" placeholder="วางลิงก์แบบสำรวจที่นี่...">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ปุ่มนำทาง -->
+        <div class="d-flex justify-content-between mb-5">
+          <a href="unit4.html" class="btn btn-outline-secondary btn-lg">
+            <i class="fas fa-arrow-left me-2"></i>กลับไปหน้ารวมเนื้อหา
+          </a>
+          <a href="unit4-3.html" class="btn btn-success btn-lg">
+            บทต่อไป: ความปลอดภัยออนไลน์ <i class="fas fa-arrow-right me-2"></i>
+          </a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="footer-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="head-content"></div>
+  <style>
+    /* สไตล์เฉพาะสำหรับบทเรียนความปลอดภัยออนไลน์ */
+    .lesson-header {
+      background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);
+      border-radius: 12px;
+      color: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .threat-card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .threat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .threat-card.virus {
+      border-left: 5px solid #dc3545;
+    }
+    
+    .threat-card.phishing {
+      border-left: 5px solid #fd7e14;
+    }
+    
+    .threat-card.hacking {
+      border-left: 5px solid #6f42c1;
+    }
+    
+    .threat-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .protection-tips {
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 5px solid #20c997;
+    }
+    
+    .tool-card {
+      text-align: center;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .tool-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .tool-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .activity-card {
+      border-radius: 12px;
+      border-left: 5px solid #0dcaf0;
+      background-color: rgba(13, 202, 240, 0.05);
+    }
+    
+    @media (max-width: 768px) {
+      .lesson-header {
+        padding: 1.5rem;
+      }
+      
+      .threat-icon {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-content"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebar-content"></div>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- ส่วนหัวบทเรียน -->
+        <section class="lesson-header">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="d-flex align-items-center mb-3">
+                <h1 class="mb-0">ความปลอดภัยออนไลน์</h1>
+              </div>
+              <p class="lead mb-0">เรียนรู้เกี่ยวกับภัยคุกคามออนไลน์และวิธีการป้องกันตนเอง</p>
+            </div>
+            <div class="col-md-4 d-none d-md-block text-center">
+              <i class="fas fa-shield-alt fa-4x" style="opacity: 0.8;"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- ภัยคุกคามออนไลน์ -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-exclamation-triangle text-danger me-2"></i>ภัยคุกคามออนไลน์หลัก</h3>
+          </div>
+          <div class="card-body">
+            <div class="row g-4">
+              <!-- ไวรัสและมัลแวร์ -->
+              <div class="col-md-4">
+                <div class="threat-card virus p-4 h-100">
+                  <div class="threat-icon text-center text-danger">
+                    <i class="fas fa-virus"></i>
+                  </div>
+                  <h4 class="text-center">ไวรัสและมัลแวร์</h4>
+                  <p class="text-center">โปรแกรมอันตรายที่ทำลายระบบหรือขโมยข้อมูล</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>ติดต่อผ่านไฟล์แนบ</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>ดาวน์โหลดจากแหล่งไม่น่าเชื่อถือ</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>ทำให้ระบบทำงานผิดปกติ</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- การฟิชชิ่ง -->
+              <div class="col-md-4">
+                <div class="threat-card phishing p-4 h-100">
+                  <div class="threat-icon text-center text-warning">
+                    <i class="fas fa-fish"></i>
+                  </div>
+                  <h4 class="text-center">การฟิชชิ่ง</h4>
+                  <p class="text-center">การหลอกลวงให้เปิดเผยข้อมูลสำคัญ</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-warning"></i></span>อีเมลหรือเว็บไซต์ปลอม</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-warning"></i></span>หลอกให้กรอกข้อมูลส่วนตัว</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-warning"></i></span>ดูเหมือนมาจากองค์กรจริง</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- การแฮ็ก -->
+              <div class="col-md-4">
+                <div class="threat-card hacking p-4 h-100">
+                  <div class="threat-icon text-center text-primary">
+                    <i class="fas fa-user-secret"></i>
+                  </div>
+                  <h4 class="text-center">การแฮ็กบัญชี</h4>
+                  <p class="text-center">การเข้าถึงบัญชีโดยไม่ได้รับอนุญาต</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ใช้รหัสผ่านที่คาดเดาได้ง่าย</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ไม่ใช้การยืนยันตัวตนสองขั้นตอน</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>เข้าสู่ระบบในอุปกรณ์สาธารณะ</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- การป้องกัน -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-shield-alt text-info me-2"></i>วิธีการป้องกัน</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h4><i class="fas fa-key text-info me-2"></i>การจัดการรหัสผ่าน</h4>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>ใช้รหัสผ่านที่ยาวและซับซ้อน</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>ไม่ใช้รหัสผ่านเดียวกันทุกบัญชี</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>เปลี่ยนรหัสผ่านเป็นประจำ</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>ใช้ตัวจัดการรหัสผ่าน (Password Manager)</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="protection-tips">
+                  <h4><i class="fas fa-lock text-success me-2"></i>การใช้งานอย่างปลอดภัย</h4>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>เปิดการยืนยันตัวตนสองขั้นตอน (2FA)</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ตรวจสอบ URL ก่อนเข้าสู่ระบบ</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ไม่คลิกลิงก์จากอีเมลที่ไม่รู้จัก</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>อัปเดตซอฟต์แวร์เป็นประจำ</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- เครื่องมือความปลอดภัย -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-tools text-info me-2"></i>เครื่องมือความปลอดภัย</h3>
+          </div>
+          <div class="card-body">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="tool-card">
+                  <div class="tool-icon text-primary">
+                    <i class="fas fa-shield-virus"></i>
+                  </div>
+                  <h5>โปรแกรมป้องกันไวรัส</h5>
+                  <p>เช่น Windows Defender, Avast, Bitdefender</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="tool-card">
+                  <div class="tool-icon text-success">
+                    <i class="fas fa-key"></i>
+                  </div>
+                  <h5>ตัวจัดการรหัสผ่าน</h5>
+                  <p>เช่น LastPass, 1Password, Bitwarden</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="tool-card">
+                  <div class="tool-icon text-warning">
+                    <i class="fas fa-user-lock"></i>
+                  </div>
+                  <h5>การยืนยันตัวตนสองขั้นตอน</h5>
+                  <p>เช่น Google Authenticator, Authy</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="tool-card">
+                  <div class="tool-icon text-danger">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <h5>VPN</h5>
+                  <p>เช่น NordVPN, ExpressVPN, ProtonVPN</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="alert alert-info mt-4">
+              <i class="fas fa-info-circle me-2"></i>
+              การใช้เครื่องมือความปลอดภัยหลายชั้นจะช่วยลดความเสี่ยงจากการถูกโจมตีออนไลน์
+            </div>
+          </div>
+        </div>
+
+        <!-- กิจกรรมการเรียนรู้ -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-tasks text-info me-2"></i>กิจกรรมการเรียนรู้</h3>
+          </div>
+          <div class="card-body">
+            <div class="activity-card p-4 mb-4">
+              <h4><i class="fas fa-shield-alt text-info me-2"></i>กิจกรรมที่ 1: ตรวจสอบความปลอดภัย</h4>
+              <p>ให้นักเรียนตรวจสอบความปลอดภัยของบัญชีออนไลน์ของตนเองตามหัวข้อต่อไปนี้:</p>
+              <ol>
+                <li>ความแข็งแรงของรหัสผ่าน</li>
+                <li>การเปิดใช้ 2FA</li>
+                <li>การอัปเดตซอฟต์แวร์</li>
+                <li>การตั้งค่าความเป็นส่วนตัว</li>
+              </ol>
+              <textarea class="form-control mt-3" rows="4" placeholder="เขียนผลการตรวจสอบของนักเรียนที่นี่..."></textarea>
+            </div>
+            
+            <div class="activity-card p-4">
+              <h4><i class="fas fa-exclamation-triangle text-info me-2"></i>กิจกรรมที่ 2: ระบุการฟิชชิ่ง</h4>
+              <p>ให้นักเรียนวิเคราะห์ว่าอีเมลต่อไปนี้เป็นอีเมลฟิชชิ่งหรือไม่ และระบุสาเหตุ:</p>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5>หัวข้อ: ตรวจสอบบัญชีของคุณทันที!</h5>
+                  <p>เรียนลูกค้าที่นับถือ,</p>
+                  <p>บัญชีของคุณมีปัญหาด้านความปลอดภัย กรุณาคลิกที่ลิงก์ด้านล่างเพื่อยืนยันข้อมูลของคุณ:</p>
+                  <a href="#" class="text-danger">http://fake-bank.com/verify</a>
+                  <p class="mt-2">หากไม่ดำเนินการภายใน 24 ชั่วโมง บัญชีของคุณจะถูกระงับ</p>
+                </div>
+              </div>
+              <textarea class="form-control mt-3" rows="4" placeholder="เขียนการวิเคราะห์ของนักเรียนที่นี่..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- ปุ่มนำทาง -->
+        <div class="d-flex justify-content-between mb-5">
+          <a href="unit4.html" class="btn btn-outline-secondary btn-lg">
+            <i class="fas fa-arrow-left me-2"></i>กลับไปหน้ารวมเนื้อหา
+          </a>
+          <a href="unit4.html" class="btn btn-info btn-lg">
+            กลับไปที่หน่วยการเรียนรู้ <i class="fas fa-home me-2"></i>
+          </a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="footer-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

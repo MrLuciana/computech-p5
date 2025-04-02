@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="head-content"></div>
+  <style>
+    /* สไตล์เฉพาะสำหรับบทเรียนบริการอินเทอร์เน็ต */
+    .lesson-header {
+      background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+      border-radius: 12px;
+      color: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .service-card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    
+    .service-card.search {
+      border-left: 5px solid #4e54c8;
+    }
+    
+    .service-card.email {
+      border-left: 5px solid #11998e;
+    }
+    
+    .service-card.cloud {
+      border-left: 5px solid #f46b45;
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .usage-tips {
+      background-color: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-left: 5px solid #ffc107;
+    }
+    
+    .example-card {
+      text-align: center;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .example-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .example-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+    
+    .activity-card {
+      border-radius: 12px;
+      border-left: 5px solid #0dcaf0;
+      background-color: rgba(13, 202, 240, 0.05);
+    }
+    
+    @media (max-width: 768px) {
+      .lesson-header {
+        padding: 1.5rem;
+      }
+      
+      .service-icon {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-content"></div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div id="sidebar-content"></div>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- ส่วนหัวบทเรียน -->
+        <section class="lesson-header">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <div class="d-flex align-items-center mb-3">
+                <h1 class="mb-0">บริการอินเทอร์เน็ต</h1>
+              </div>
+              <p class="lead mb-0">เรียนรู้เกี่ยวกับบริการหลักบนอินเทอร์เน็ตและการใช้งานอย่างมีประสิทธิภาพ</p>
+            </div>
+            <div class="col-md-4 d-none d-md-block text-center">
+              <i class="fas fa-globe fa-4x" style="opacity: 0.8;"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- บริการหลักบนอินเทอร์เน็ต -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-wifi text-primary me-2"></i>บริการหลักบนอินเทอร์เน็ต</h3>
+          </div>
+          <div class="card-body">
+            <div class="row g-4">
+              <!-- การค้นหาข้อมูล -->
+              <div class="col-md-4">
+                <div class="service-card search p-4 h-100">
+                  <div class="service-icon text-center text-primary">
+                    <i class="fas fa-search"></i>
+                  </div>
+                  <h4 class="text-center">การค้นหาข้อมูล</h4>
+                  <p class="text-center">การใช้เครื่องมือค้นหาข้อมูลอย่าง Google, Bing เพื่อหาข้อมูลที่ต้องการ</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ใช้คำค้นหาที่เฉพาะเจาะจง</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ใช้เครื่องมือขั้นสูง</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ตรวจสอบความน่าเชื่อถือ</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- อีเมล -->
+              <div class="col-md-4">
+                <div class="service-card email p-4 h-100">
+                  <div class="service-icon text-center text-success">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <h4 class="text-center">อีเมล</h4>
+                  <p class="text-center">บริการส่งและรับจดหมายอิเล็กทรอนิกส์อย่าง Gmail, Outlook</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>เขียนหัวข้อที่ชัดเจน</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>ตรวจสอบก่อนส่ง</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>จัดการกล่องจดหมาย</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- คลาวด์เซอร์วิส -->
+              <div class="col-md-4">
+                <div class="service-card cloud p-4 h-100">
+                  <div class="service-icon text-center text-danger">
+                    <i class="fas fa-cloud"></i>
+                  </div>
+                  <h4 class="text-center">คลาวด์เซอร์วิส</h4>
+                  <p class="text-center">บริการเก็บข้อมูลและทำงานบนคลาวด์ เช่น Google Drive, Dropbox</p>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>เข้าถึงได้ทุกที่</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>แชร์ไฟล์ง่าย</li>
+                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>สำรองข้อมูลอัตโนมัติ</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- เทคนิคการใช้บริการ -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-lightbulb text-primary me-2"></i>เทคนิคการใช้บริการ</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h4><i class="fas fa-search-plus text-info me-2"></i>เทคนิคการค้นหาข้อมูล</h4>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>ใช้เครื่องหมายคำพูด ("") สำหรับการค้นหาที่ตรงตัว</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>ใช้ site: เพื่อค้นหาในเว็บไซต์เฉพาะ</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>ใช้ filetype: เพื่อค้นหาประเภทไฟล์เฉพาะ</li>
+                  <li><span class="fa-li"><i class="fas fa-check text-info"></i></span>ใช้ - เพื่อยกเว้นคำที่ไม่ต้องการ</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <div class="usage-tips">
+                  <h4><i class="fas fa-envelope-open-text text-warning me-2"></i>การใช้อีเมลอย่างมืออาชีพ</h4>
+                  <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>เขียนหัวข้อให้ชัดเจนและกระชับ</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>ใช้ภาษาที่เป็นทางการเหมาะสม</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>ตรวจสอบตัวสะกดก่อนส่ง</li>
+                    <li><span class="fa-li"><i class="fas fa-check text-warning"></i></span>จัดการไฟล์แนบให้เหมาะสม</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ตัวอย่างบริการยอดนิยม -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-star text-primary me-2"></i>ตัวอย่างบริการยอดนิยม</h3>
+          </div>
+          <div class="card-body">
+            <div class="row g-4">
+              <div class="col-md-3">
+                <div class="example-card">
+                  <div class="example-icon text-primary">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <h5>Google</h5>
+                  <p>เครื่องมือค้นหา</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="example-card">
+                  <div class="example-icon text-danger">
+                    <i class="fab fa-youtube"></i>
+                  </div>
+                  <h5>YouTube</h5>
+                  <p>วิดีโอสตรีมมิ่ง</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="example-card">
+                  <div class="example-icon text-success">
+                    <i class="fab fa-dropbox"></i>
+                  </div>
+                  <h5>Dropbox</h5>
+                  <p>คลาวด์สตอเรจ</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="example-card">
+                  <div class="example-icon text-warning">
+                    <i class="fas fa-shopping-cart"></i>
+                  </div>
+                  <h5>Shopee</h5>
+                  <p>อีคอมเมิร์ซ</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="alert alert-info mt-4">
+              <i class="fas fa-info-circle me-2"></i>
+              บริการบนอินเทอร์เน็ตส่วนใหญ่สามารถใช้งานได้ฟรี แต่บางบริการอาจมีค่าใช้จ่ายสำหรับฟีเจอร์พิเศษ
+            </div>
+          </div>
+        </div>
+
+        <!-- กิจกรรมการเรียนรู้ -->
+        <div class="card shadow-sm mb-4 border-0">
+          <div class="card-header bg-white border-0">
+            <h3 class="mb-0"><i class="fas fa-tasks text-primary me-2"></i>กิจกรรมการเรียนรู้</h3>
+          </div>
+          <div class="card-body">
+            <div class="activity-card p-4 mb-4">
+              <h4><i class="fas fa-search text-info me-2"></i>กิจกรรมที่ 1: การค้นหาข้อมูลขั้นสูง</h4>
+              <p>ให้นักเรียนใช้เทคนิคการค้นหาข้อมูลขั้นสูงเพื่อหาคำตอบสำหรับคำถามต่อไปนี้:</p>
+              <ol>
+                <li>ค้นหาข้อมูลเกี่ยวกับ "การเปลี่ยนแปลงสภาพภูมิอากาศ" เฉพาะจากเว็บไซต์ของรัฐบาล (.go.th)</li>
+                <li>ค้นหาไฟล์ PDF เกี่ยวกับ "การประหยัดพลังงาน"</li>
+              </ol>
+              <textarea class="form-control mt-3" rows="4" placeholder="เขียนผลการค้นหาของนักเรียนที่นี่..."></textarea>
+            </div>
+            
+            <div class="activity-card p-4">
+              <h4><i class="fas fa-envelope text-info me-2"></i>กิจกรรมที่ 2: การเขียนอีเมล</h4>
+              <p>ให้นักเรียนเขียนอีเมลสมมติเพื่อขอข้อมูลเกี่ยวกับหลักสูตรจากสถาบันการศึกษา โดยปฏิบัติตามหลักการเขียนอีเมลอย่างมืออาชีพ</p>
+              <textarea class="form-control mt-3" rows="6" placeholder="เขียนอีเมลของนักเรียนที่นี่..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- ปุ่มนำทาง -->
+        <div class="d-flex justify-content-between mb-5">
+          <a href="unit4.html" class="btn btn-outline-secondary btn-lg">
+            <i class="fas fa-arrow-left me-2"></i>กลับไปหน้ารวมเนื้อหา
+          </a>
+          <a href="unit4-2.html" class="btn btn-primary btn-lg">
+            บทต่อไป: แบบสำรวจออนไลน์ <i class="fas fa-arrow-right me-2"></i>
+          </a>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="footer-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

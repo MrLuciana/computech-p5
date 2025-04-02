@@ -2,7 +2,107 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <div id="head-content"></div>
+  <style>
+    /* สไตล์ที่ปรับปรุงใหม่ */
+    .hero-section {
+      background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      padding: 3rem 2rem;
+    }
+    
+    .hero-img-container {
+      position: relative;
+      overflow: hidden;
+      min-height: 250px;
+    }
+    
+    .hero-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 280px;
+      border-top-left-radius: 30px;
+      box-shadow: -5px 5px 20px rgba(0,0,0,0.2);
+      transition: transform 0.5s ease;
+    }
+    
+    .hero-img:hover {
+      transform: scale(1.05);
+    }
+    
+    .lesson-card {
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .lesson-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .lesson-img {
+      height: 180px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+    
+    .lesson-card:hover .lesson-img {
+      transform: scale(1.05);
+    }
+    
+    .lesson-number {
+      width: 36px;
+      height: 36px;
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    
+    .resource-card {
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    
+    .resource-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 2rem 1rem;
+      }
+      
+      .hero-img {
+        position: relative;
+        max-height: 200px;
+        margin-top: 20px;
+        border-top-left-radius: 12px;
+      }
+      
+      .lesson-img {
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-content"></div>
@@ -12,238 +112,175 @@
       <div id="sidebar-content"></div>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">หน่วยที่ 4: การใช้บริการอินเทอร์เน็ต</h1>
-          <div class="btn-toolbar mb-2 mb-md-0">
-            <button class="btn btn-sm btn-outline-secondary" onclick="toggleDarkMode()">
-              <i class="fas fa-moon"></i> โหมดกลางคืน
-            </button>
+        <!-- Hero Section ที่ปรับปรุงใหม่ -->
+        <section class="hero-section mb-5">
+          <div class="row g-0">
+            <div class="col-lg-8 hero-content text-white">
+              <div class="d-flex align-items-center mb-3">
+                <div class="lesson-number">4</div>
+                <h1 class="fw-bold mb-0">การใช้บริการอินเทอร์เน็ต</h1>
+              </div>
+              <p class="lead mb-4">เรียนรู้เกี่ยวกับการใช้บริการต่างๆ บนอินเทอร์เน็ตอย่างปลอดภัยและมีประสิทธิภาพ</p>
+              <div class="d-flex gap-3">
+                <a href="#lesson-cards" class="btn btn-light btn-lg px-4">
+                  <i class="fas fa-play me-2"></i>เริ่มศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 hero-img-container d-none d-lg-block">
+              <img src="images/lesson4.jpg" alt="การใช้บริการอินเทอร์เน็ต" class="hero-img img-fluid">
+            </div>
+          </div>
+        </section>
+
+        <!-- Unit Info ที่ปรับปรุงใหม่ -->
+        <div class="card shadow-sm mb-5 border-0">
+          <div class="card-header bg-white border-0 pb-0">
+            <h3 class="mb-3"><i class="fas fa-info-circle text-primary me-2"></i>เกี่ยวกับหน่วยการเรียนรู้</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                <p class="mb-4">หน่วยที่ 4 นี้จะพัฒนาทักษะการใช้บริการต่างๆ บนอินเทอร์เน็ต ครอบคลุมเนื้อหาเกี่ยวกับ:</p>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>บริการหลักบนอินเทอร์เน็ตและการใช้งาน</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>การสร้างและใช้งานแบบสำรวจออนไลน์</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>การใช้งานเทคโนโลยีสารสนเทศอย่างปลอดภัย</li>
+                  <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>การป้องกันภัยคุกคามออนไลน์</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <div class="bg-light p-4 rounded-3 h-100">
+                  <h5 class="d-flex align-items-center mb-3">
+                    <i class="fas fa-clock text-primary me-2"></i>ระยะเวลาเรียน
+                  </h5>
+                  <p class="mb-4">ประมาณ 6 ชั่วโมง</p>
+                  
+                  <h5 class="d-flex align-items-center mb-3">
+                    <i class="fas fa-star text-primary me-2"></i>ระดับความยาก
+                  </h5>
+                  <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Lesson Cards ที่ปรับปรุงใหม่ -->
+        <h2 id="lesson-cards" class="mb-4 pb-2 border-bottom">
+          <i class="fas fa-book-open text-primary me-2"></i>หัวข้อการเรียนรู้
+        </h2>
         
-        <div class="alert alert-info fade-in">
-          <i class="fas fa-info-circle me-2"></i> เรียนรู้การใช้บริการต่างๆ บนอินเทอร์เน็ตอย่างปลอดภัยและมีประสิทธิภาพ
-        </div>
-        
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="card mb-4">
-              <div class="card-header bg-primary text-white">
-                <i class="fas fa-globe me-2"></i> เนื้อหาการเรียนรู้
+        <div class="row g-4 mb-5">
+          <!-- Lesson 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson4-1.jpg" alt="บริการอินเทอร์เน็ต" class="lesson-img w-100">
               </div>
               <div class="card-body">
-                <div class="lesson-tabs mb-4">
-                  <ul class="nav nav-tabs" id="lessonTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab">
-                        <i class="fas fa-wifi me-1"></i> บริการอินเทอร์เน็ต
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="survey-tab" data-bs-toggle="tab" data-bs-target="#survey" type="button" role="tab">
-                        <i class="fas fa-poll me-1"></i> แบบสำรวจออนไลน์
-                      </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="safety-tab" data-bs-toggle="tab" data-bs-target="#safety" type="button" role="tab">
-                        <i class="fas fa-shield-alt me-1"></i> ใช้เทคโนโลยีอย่างปลอดภัย
-                      </button>
-                    </li>
-                  </ul>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number">1</div>
+                  <h4 class="mb-0 text-primary">บริการอินเทอร์เน็ต</h4>
                 </div>
+                <p class="text-muted small mb-3">บริการหลักและการใช้งานบนอินเทอร์เน็ต</p>
+                <p class="card-text">เรียนรู้เกี่ยวกับบริการต่างๆ บนอินเทอร์เน็ตและการใช้งานอย่างมีประสิทธิภาพ</p>
+                <a href="unit4-1.html" class="btn btn-outline-primary w-100 mt-3">
+                  <i class="fas fa-book-open me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lesson 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson4-2.jpg" alt="แบบสำรวจออนไลน์" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #198754;">2</div>
+                  <h4 class="mb-0 text-success">แบบสำรวจออนไลน์</h4>
+                </div>
+                <p class="text-muted small mb-3">การสร้างและใช้งานแบบสำรวจออนไลน์</p>
+                <p class="card-text">วิธีการสร้างแบบสำรวจออนไลน์และการวิเคราะห์ผลลัพธ์เบื้องต้น</p>
+                <a href="unit4-2.html" class="btn btn-outline-success w-100 mt-3">
+                  <i class="fas fa-lightbulb me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Lesson 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="lesson-card shadow-sm">
+              <div class="card-img-top overflow-hidden">
+                <img src="images/lesson4-3.jpg" alt="ความปลอดภัยออนไลน์" class="lesson-img w-100">
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="lesson-number" style="background-color: #0dcaf0;">3</div>
+                  <h4 class="mb-0 text-info">ความปลอดภัยออนไลน์</h4>
+                </div>
+                <p class="text-muted small mb-3">การใช้เทคโนโลยีสารสนเทศอย่างปลอดภัย</p>
+                <p class="card-text">เรียนรู้เกี่ยวกับภัยคุกคามออนไลน์และวิธีการป้องกันตนเอง</p>
+                <a href="unit4-3.html" class="btn btn-outline-info w-100 mt-3">
+                  <i class="fas fa-laptop-code me-2"></i>ศึกษาเนื้อหา
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="tab-content" id="lessonTabsContent">
-                  <!-- หัวข้อ 1: บริการอินเทอร์เน็ต -->
-                  <div class="tab-pane fade show active" id="services" role="tabpanel">
-                    <h3><i class="fas fa-wifi text-primary me-2"></i>บริการอินเทอร์เน็ต</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-check-circle text-success me-2"></i> บริการหลักบนอินเทอร์เน็ต</h5>
-                          <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-search"></i></span>การค้นหาข้อมูล (Search Engines)</li>
-                            <li><span class="fa-li"><i class="fas fa-envelope"></i></span>อีเมล (Email)</li>
-                            <li><span class="fa-li"><i class="fas fa-cloud"></i></span>คลาวด์เซอร์วิส (Cloud Services)</li>
-                            <li><span class="fa-li"><i class="fas fa-video"></i></span>สตรีมมิ่ง (Streaming)</li>
-                            <li><span class="fa-li"><i class="fas fa-shopping-cart"></i></span>การซื้อขายออนไลน์ (E-Commerce)</li>
-                          </ul>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="text-center">
-                            <img src="images/internet-services.jpg" alt="บริการอินเทอร์เน็ต" class="img-fluid rounded" style="max-height: 200px;">
-                            <p class="text-muted mt-2">ตัวอย่างบริการต่างๆ บนอินเทอร์เน็ต</p>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div class="card mt-4">
-                        <div class="card-header bg-info text-white">
-                          <i class="fas fa-lightbulb me-2"></i> ตัวอย่างเว็บไซต์บริการ
-                        </div>
-                        <div class="card-body">
-                          <div class="row row-cols-2 row-cols-md-4 g-3">
-                            <div class="col">
-                              <div class="service-card text-center">
-                                <i class="fas fa-search fa-2x mb-2 text-primary"></i>
-                                <p>Google</p>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="service-card text-center">
-                                <i class="fas fa-envelope fa-2x mb-2 text-danger"></i>
-                                <p>Gmail</p>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="service-card text-center">
-                                <i class="fas fa-film fa-2x mb-2 text-success"></i>
-                                <p>YouTube</p>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="service-card text-center">
-                                <i class="fas fa-shopping-bag fa-2x mb-2 text-warning"></i>
-                                <p>Shopee</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+        <!-- Resources Section ที่ปรับปรุงใหม่ -->
+        <div class="row mb-5">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <div class="card resource-card h-100">
+              <div class="card-header bg-white border-0">
+                <h3 class="mb-0"><i class="fas fa-graduation-cap text-primary me-2"></i>วิธีการเรียนให้มีประสิทธิภาพ</h3>
+              </div>
+              <div class="card-body">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-check-circle fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">เรียนตามลำดับ</h5>
+                        <p class="mb-0 text-muted">ศึกษาเนื้อหาตามลำดับจากหัวข้อ 1 ถึง 3 เพื่อความเข้าใจที่ต่อเนื่อง</p>
                       </div>
                     </div>
                   </div>
-
-                  <!-- หัวข้อ 2: แบบสำรวจความคิดเห็นออนไลน์ -->
-                  <div class="tab-pane fade" id="survey" role="tabpanel">
-                    <h3><i class="fas fa-poll text-info me-2"></i>แบบสำรวจความคิดเห็นออนไลน์</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <h5><i class="fas fa-tools me-2"></i> เครื่องมือสร้างแบบสำรวจ</h5>
-                          <div class="list-group mb-3">
-                            <a href="https://docs.google.com/forms" target="_blank" class="list-group-item list-group-item-action">
-                              <i class="fab fa-google me-2 text-primary"></i> Google Forms
-                            </a>
-                            <a href="https://www.surveymonkey.com" target="_blank" class="list-group-item list-group-item-action">
-                              <i class="fas fa-monkey me-2 text-warning"></i> SurveyMonkey
-                            </a>
-                            <a href="https://www.typeform.com" target="_blank" class="list-group-item list-group-item-action">
-                              <i class="fas fa-keyboard me-2 text-info"></i> Typeform
-                            </a>
-                          </div>
-                          
-                          <h5><i class="fas fa-check-circle me-2 text-success"></i> องค์ประกอบของแบบสำรวจที่ดี</h5>
-                          <ul>
-                            <li>คำถามชัดเจน เข้าใจง่าย</li>
-                            <li>มีคำตอบครอบคลุมทุกความเป็นไปได้</li>
-                            <li>ไม่ยาวเกินไป</li>
-                            <li>ออกแบบให้ตอบได้สะดวก</li>
-                          </ul>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card">
-                            <div class="card-header bg-primary text-white">
-                              <i class="fas fa-edit me-2"></i> ตัวอย่างแบบสำรวจ
-                            </div>
-                            <div class="card-body">
-                              <form>
-                                <div class="mb-3">
-                                  <label class="form-label">คุณใช้บริการอินเทอร์เน็ตบ่อยแค่ไหน?</label>
-                                  <select class="form-select">
-                                    <option>ทุกวัน</option>
-                                    <option>สัปดาห์ละ 3-4 ครั้ง</option>
-                                    <option>สัปดาห์ละ 1-2 ครั้ง</option>
-                                    <option>นานๆ ครั้ง</option>
-                                  </select>
-                                </div>
-                                
-                                <div class="mb-3">
-                                  <label class="form-label">คุณใช้บริการอะไรบ่อยที่สุด? (เลือกได้มากกว่า 1 ข้อ)</label>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="service1">
-                                    <label class="form-check-label" for="service1">การค้นหาข้อมูล</label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="service2">
-                                    <label class="form-check-label" for="service2">อีเมล</label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="service3">
-                                    <label class="form-check-label" for="service3">โซเชียลมีเดีย</label>
-                                  </div>
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">ส่งคำตอบ</button>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-tasks fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">ทำกิจกรรมประกอบ</h5>
+                        <p class="mb-0 text-muted">ฝึกปฏิบัติตามกิจกรรมในแต่ละบท เพื่อเสริมความเข้าใจ</p>
                       </div>
                     </div>
                   </div>
-
-                  <!-- หัวข้อ 3: การใช้เทคโนโลยีสารสนเทศอย่างปลอดภัย -->
-                  <div class="tab-pane fade" id="safety" role="tabpanel">
-                    <h3><i class="fas fa-shield-alt text-success me-2"></i>การใช้เทคโนโลยีสารสนเทศอย่างปลอดภัย</h3>
-                    <div class="lesson-content">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-danger text-white">
-                              <i class="fas fa-exclamation-triangle me-2"></i> ภัยคุกคามออนไลน์
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">ไวรัสและมัลแวร์</li>
-                              <li class="list-group-item">การหลอกลวง (Phishing)</li>
-                              <li class="list-group-item">การแฮ็กบัญชี</li>
-                              <li class="list-group-item">เนื้อหาที่ไม่เหมาะสม</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="card mb-3">
-                            <div class="card-header bg-success text-white">
-                              <i class="fas fa-check-circle me-2"></i> วิธีป้องกัน
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">ใช้รหัสผ่านที่แข็งแรง</li>
-                              <li class="list-group-item">ไม่เปิดลิงก์จากแหล่งไม่น่าเชื่อถือ</li>
-                              <li class="list-group-item">อัปเดตซอฟต์แวร์เป็นประจำ</li>
-                              <li class="list-group-item">ตั้งค่าความเป็นส่วนตัว</li>
-                            </ul>
-                          </div>
-                        </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-question-circle fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">ทดสอบความเข้าใจ</h5>
+                        <p class="mb-0 text-muted">ทำแบบทดสอบหลังเรียนเพื่อประเมินความรู้ของตัวเอง</p>
                       </div>
-                      
-                      <div class="safety-tips mt-4">
-                        <div class="tip-card">
-                          <div class="tip-icon bg-primary">
-                            <i class="fas fa-lock"></i>
-                          </div>
-                          <div class="tip-content">
-                            <h5>สร้างรหัสผ่านที่ปลอดภัย</h5>
-                            <p>ใช้ตัวอักษรใหญ่เล็กผสมกัน ตัวเลข และสัญลักษณ์</p>
-                          </div>
-                        </div>
-                        
-                        <div class="tip-card">
-                          <div class="tip-icon bg-warning">
-                            <i class="fas fa-user-secret"></i>
-                          </div>
-                          <div class="tip-content">
-                            <h5>ระวังการให้ข้อมูลส่วนตัว</h5>
-                            <p>ไม่ควรบอกชื่อ ที่อยู่ เบอร์โทรศัพท์แก่คนแปลกหน้า</p>
-                          </div>
-                        </div>
-                        
-                        <div class="tip-card">
-                          <div class="tip-icon bg-info">
-                            <i class="fas fa-question-circle"></i>
-                          </div>
-                          <div class="tip-content">
-                            <h5>ตรวจสอบก่อนเชื่อ</h5>
-                            <p>ข้อมูลบางอย่างบนอินเทอร์เน็ตอาจไม่ถูกต้อง</p>
-                          </div>
-                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                      <i class="fas fa-users fa-lg text-primary mt-1 me-3"></i>
+                      <div>
+                        <h5 class="mb-2">เรียนรู้ร่วมกัน</h5>
+                        <p class="mb-0 text-muted">ปรึกษาและแบ่งปันความรู้กับเพื่อนในชั้นเรียน</p>
                       </div>
                     </div>
                   </div>
@@ -252,54 +289,63 @@
             </div>
           </div>
           
-          <!-- ส่วนเสริมด้านข้าง -->
           <div class="col-lg-4">
-            <div class="card mb-4">
-              <div class="card-header bg-success text-white">
-                <i class="fas fa-tasks me-2"></i> แบบฝึกหัด
+            <div class="card resource-card h-100">
+              <div class="card-header bg-white border-0">
+                <h3 class="mb-0"><i class="fas fa-download text-primary me-2"></i>เอกสารประกอบการเรียน</h3>
               </div>
               <div class="card-body">
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-question-circle me-2"></i> แบบทดสอบก่อนเรียน
+                <div class="list-group list-group-flush">
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-pdf fa-lg text-danger resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">เอกสารประกอบหน่วยที่ 4</h6>
+                        <small class="text-muted">PDF • 18 หน้า</small>
+                      </div>
+                    </div>
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-poll me-2"></i> สร้างแบบสำรวจออนไลน์
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-word fa-lg text-primary resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">แบบฝึกหัดทั้งหมด</h6>
+                        <small class="text-muted">DOCX • 8 แบบฝึกหัด</small>
+                      </div>
+                    </div>
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-shield-alt me-2"></i> ตรวจสอบความปลอดภัย
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-file-powerpoint fa-lg text-warning resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">สไลด์การสอนเต็มหน่วย</h6>
+                        <small class="text-muted">PPTX • 45 สไลด์</small>
+                      </div>
+                    </div>
                   </a>
-                  <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-clipboard-check me-2"></i> แบบทดสอบหลังเรียน
+                  <a href="#" class="list-group-item list-group-item-action border-0 py-3">
+                    <div class="d-flex align-items-center">
+                      <i class="fas fa-link fa-lg text-info resource-icon"></i>
+                      <div>
+                        <h6 class="mb-1">แหล่งเรียนรู้เพิ่มเติม</h6>
+                        <small class="text-muted">รวมลิงก์น่าสนใจ</small>
+                      </div>
+                    </div>
                   </a>
                 </div>
               </div>
             </div>
-            
-            <div class="card mb-4">
-              <div class="card-header bg-warning text-dark">
-                <i class="fas fa-download me-2"></i> เอกสารประกอบ
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <a href="#" class="text-decoration-none">
-                      <i class="fas fa-file-pdf me-2 text-danger"></i> คู่มือความปลอดภัยออนไลน์
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="text-decoration-none">
-                      <i class="fas fa-file-word me-2 text-primary"></i> ใบงานที่ 4
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="text-decoration-none">
-                      <i class="fas fa-file-powerpoint me-2 text-warning"></i> สไลด์การสอน
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section ที่ปรับปรุงใหม่ -->
+        <div class="card bg-light border-0 shadow-sm mb-5">
+          <div class="card-body text-center p-5">
+            <h2 class="mb-3"><i class="fas fa-rocket text-primary me-2"></i>พร้อมเริ่มเรียนรู้แล้วหรือยัง?</h2>
+            <p class="lead mb-4">เลือกหัวข้อที่สนใจด้านบนเพื่อเริ่มต้นพัฒนาทักษะการใช้บริการอินเทอร์เน็ตของคุณ</p>
+            <a href="#lesson-cards" class="btn btn-primary btn-lg px-4">
+              <i class="fas fa-play me-2"></i>เริ่มเรียนตอนนี้
+            </a>
           </div>
         </div>
       </main>
