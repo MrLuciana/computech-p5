@@ -31,11 +31,6 @@ function loadHTMLComponents() {
     .then(data => {
       document.getElementById("sidebar-content").innerHTML = data;
       initSidebar(); // เรียกใช้ฟังก์ชันจัดการ sidebar
-    })
-    .catch(error => {
-      console.error('Error loading sidebar:', error);
-      document.getElementById("sidebar-content").innerHTML = 
-        '<div class="alert alert-danger">โหลดเมนูไม่สำเร็จ</div>';
     });
 
   // โหลด footer
