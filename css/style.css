@@ -1,3 +1,12 @@
+/* Style สำหรับปรับขนาด Container หลักของวิดีโอ */
+.video-container {
+  max-width: 800px; 
+  width: 100%; 
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 /* ตัวแปรสี */
 :root {
     --primary-color: #0d6efd;
