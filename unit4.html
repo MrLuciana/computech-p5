@@ -113,25 +113,104 @@
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <!-- Hero Section ที่ปรับปรุงใหม่ -->
-        <section class="hero-section mb-5">
-          <div class="row g-0">
-            <div class="col-lg-8 hero-content text-white">
-              <div class="d-flex align-items-center mb-3">
-                <div class="lesson-number">4</div>
-                <h1 class="fw-bold mb-0">การใช้บริการอินเทอร์เน็ต</h1>
+
+        <section class="hero-section mb-5 position-relative overflow-hidden">
+          <div class="container-fluid px-0">
+            <div class="row g-0 align-items-center">
+              <div class="col-lg-8 hero-content text-white py-5 px-4 px-md-5 position-relative z-index-1" >
+                <div class="position-relative z-index-1">
+                  <div class="d-flex align-items-center mb-3">
+                    <h1 class="fw-bold mb-0 display-4">
+                      การใช้บริการอินเทอร์เน็ต
+                    </h1>
+                  </div>
+
+                  <p class="lead mb-4 fs-5">
+                    เรียนรู้เกี่ยวกับการใช้บริการต่างๆ บนอินเทอร์เน็ตอย่างปลอดภัยและมีประสิทธิภาพ
+                  </p>
+
+                  <div class="d-flex flex-wrap gap-3">
+                    <a
+                      href="#lesson-cards"
+                      class="btn btn-light btn-lg px-4 py-3 rounded-pill shadow-sm"
+                    >
+                      <i class="fas fa-play me-2"></i>เริ่มศึกษาเนื้อหา
+                    </a>
+                  </div>
+                </div>
               </div>
-              <p class="lead mb-4">เรียนรู้เกี่ยวกับการใช้บริการต่างๆ บนอินเทอร์เน็ตอย่างปลอดภัยและมีประสิทธิภาพ</p>
-              <div class="d-flex gap-3">
-                <a href="#lesson-cards" class="btn btn-light btn-lg px-4">
-                  <i class="fas fa-play me-2"></i>เริ่มศึกษาเนื้อหา
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 hero-img-container d-none d-lg-block">
-              <img src="images/lesson4.jpg" alt="การใช้บริการอินเทอร์เน็ต" class="hero-img img-fluid">
             </div>
           </div>
+
+          <!-- Decorative elements -->
+          <div class="position-absolute bottom-0 end-0 z-index-0">
+            <div class="circle-blur-1"></div>
+          </div>
         </section>
+        <style>
+          .hero-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+          }
+
+          .bg-gradient-primary {
+            background: linear-gradient(
+              135deg,
+              rgba(44, 62, 80, 0.9) 0%,
+              rgba(52, 152, 219, 0.9) 100%
+            );
+          }
+
+          .bg-gradient-overlay {
+            background: linear-gradient(
+              90deg,
+              rgba(44, 62, 80, 0.3) 0%,
+              transparent 100%
+            );
+          }
+
+          .lesson-badge {
+            width: 60px;
+            height: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          }
+
+          .hero-img {
+            object-position: center center;
+            transition: transform 0.5s ease;
+          }
+
+          .hero-section:hover .hero-img {
+            transform: scale(1.03);
+          }
+
+          .circle-blur-1 {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(60px);
+            transform: translate(30%, 30%);
+          }
+
+          .z-index-0 {
+            z-index: 0;
+          }
+          .z-index-1 {
+            z-index: 1;
+          }
+
+          @media (max-width: 992px) {
+            .hero-content {
+              padding: 3rem 2rem !important;
+            }
+
+            .hero-section {
+              border-radius: 0;
+            }
+          }
+        </style>
 
         <!-- Unit Info ที่ปรับปรุงใหม่ -->
         <div class="card shadow-sm mb-5 border-0">
@@ -335,17 +414,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- CTA Section ที่ปรับปรุงใหม่ -->
-        <div class="card bg-light border-0 shadow-sm mb-5">
-          <div class="card-body text-center p-5">
-            <h2 class="mb-3"><i class="fas fa-rocket text-primary me-2"></i>พร้อมเริ่มเรียนรู้แล้วหรือยัง?</h2>
-            <p class="lead mb-4">เลือกหัวข้อที่สนใจด้านบนเพื่อเริ่มต้นพัฒนาทักษะการใช้บริการอินเทอร์เน็ตของคุณ</p>
-            <a href="#lesson-cards" class="btn btn-primary btn-lg px-4">
-              <i class="fas fa-play me-2"></i>เริ่มเรียนตอนนี้
-            </a>
           </div>
         </div>
       </main>
