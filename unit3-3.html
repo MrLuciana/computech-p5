@@ -1,275 +1,398 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div id="head-content"></div>
-  <style>
-    /* สไตล์เฉพาะสำหรับบทเรียนการติดต่อสื่อสาร */
-    .lesson-header {
-      background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);
-      border-radius: 12px;
-      color: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .app-card {
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      border-left: 5px solid #0dcaf0;
-    }
-    
-    .app-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    
-    .app-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .etiquette-card {
-      border-radius: 12px;
-      border-left: 5px solid #198754;
-      background-color: rgba(25, 135, 84, 0.05);
-    }
-    
-    @media (max-width: 768px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div id="head-content"></div>
+    <style>
+      /* สไตล์เฉพาะสำหรับบทเรียนการติดต่อสื่อสาร */
       .lesson-header {
-        padding: 1.5rem;
+        background: linear-gradient(135deg, #0dcaf0 0%, #0aa2c0 100%);
+        border-radius: 12px;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
       }
-      
+
+      .app-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        border-left: 5px solid #0dcaf0;
+      }
+
+      .app-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
       .app-icon {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <div id="navbar-content"></div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div id="sidebar-content"></div>
+      .etiquette-card {
+        border-radius: 12px;
+        border-left: 5px solid #198754;
+        background-color: rgba(25, 135, 84, 0.05);
+      }
 
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <!-- ส่วนหัวบทเรียน -->
-        <section class="lesson-header">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <div class="d-flex align-items-center mb-3">
-                <h1 class="mb-0">การติดต่อสื่อสาร</h1>
-              </div>
-              <p class="lead mb-0">เรียนรู้เครื่องมือและมารยาทในการสื่อสารออนไลน์</p>
-            </div>
-            <div class="col-md-4 d-none d-md-block text-center">
-              <i class="fas fa-comments fa-4x" style="opacity: 0.8;"></i>
-            </div>
+      @media (max-width: 768px) {
+        .lesson-header {
+          padding: 1.5rem;
+        }
+
+        .app-icon {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-content"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar-content"></div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- ส่วนหัวบทเรียน -->
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">หน่วยที่ 3: การติดต่อสื่อสาร</h1>
           </div>
-        </section>
+          <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="unit3.html">หน่วยที่ 3</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                การติดต่อสื่อสาร
+              </li>
+            </ol>
+          </nav>
 
-        <!-- แอปพลิเคชันสำหรับสนทนา -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-comment-dots text-info me-2"></i>แอปพลิเคชันสำหรับสนทนา</h3>
-          </div>
-          <div class="card-body">
-            <div class="row g-4">
-              <!-- LINE -->
-              <div class="col-md-4">
-                <div class="app-card p-4 h-100">
-                  <div class="app-icon text-center" style="color: #00B900;">
-                    <i class="fab fa-line"></i>
+          <!-- แอปพลิเคชันสำหรับสนทนา -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-comment-dots text-info me-2"></i
+                >แอปพลิเคชันสำหรับสนทนา
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+                <!-- LINE -->
+                <div class="col-md-4">
+                  <div class="app-card p-4 h-100">
+                    <div class="app-icon text-center" style="color: #00b900">
+                      <i class="fab fa-line"></i>
+                    </div>
+                    <h4 class="text-center">LINE</h4>
+                    <p class="text-center">แอปพลิเคชันยอดนิยมในประเทศไทย</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #00b900"
+                          ></i></span
+                        >ส่งข้อความและสติกเกอร์
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #00b900"
+                          ></i></span
+                        >สร้างกลุ่มสนทนา
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #00b900"
+                          ></i></span
+                        >บริการ LINE Call
+                      </li>
+                    </ul>
                   </div>
-                  <h4 class="text-center">LINE</h4>
-                  <p class="text-center">แอปพลิเคชันยอดนิยมในประเทศไทย</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #00B900;"></i></span>ส่งข้อความและสติกเกอร์</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #00B900;"></i></span>สร้างกลุ่มสนทนา</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #00B900;"></i></span>บริการ LINE Call</li>
-                  </ul>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="col-md-4">
+                  <div class="app-card p-4 h-100">
+                    <div class="app-icon text-center" style="color: #25d366">
+                      <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 class="text-center">WhatsApp</h4>
+                    <p class="text-center">แอปพลิเคชันสนทนาระดับโลก</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #25d366"
+                          ></i></span
+                        >ใช้งานง่าย
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #25d366"
+                          ></i></span
+                        >เข้ารหัส end-to-end
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #25d366"
+                          ></i></span
+                        >รองรับวิดีโอคอลล์
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Messenger -->
+                <div class="col-md-4">
+                  <div class="app-card p-4 h-100">
+                    <div class="app-icon text-center" style="color: #006aff">
+                      <i class="fab fa-facebook-messenger"></i>
+                    </div>
+                    <h4 class="text-center">Messenger</h4>
+                    <p class="text-center">แอปพลิเคชันจาก Facebook</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #006aff"
+                          ></i></span
+                        >เชื่อมต่อกับบัญชี Facebook
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #006aff"
+                          ></i></span
+                        >มีฟิลเตอร์และเอฟเฟกต์
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #006aff"
+                          ></i></span
+                        >เล่นเกมร่วมกันได้
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              
-              <!-- WhatsApp -->
-              <div class="col-md-4">
-                <div class="app-card p-4 h-100">
-                  <div class="app-icon text-center" style="color: #25D366;">
-                    <i class="fab fa-whatsapp"></i>
-                  </div>
-                  <h4 class="text-center">WhatsApp</h4>
-                  <p class="text-center">แอปพลิเคชันสนทนาระดับโลก</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #25D366;"></i></span>ใช้งานง่าย</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #25D366;"></i></span>เข้ารหัส end-to-end</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #25D366;"></i></span>รองรับวิดีโอคอลล์</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- Messenger -->
-              <div class="col-md-4">
-                <div class="app-card p-4 h-100">
-                  <div class="app-icon text-center" style="color: #006AFF;">
-                    <i class="fab fa-facebook-messenger"></i>
-                  </div>
-                  <h4 class="text-center">Messenger</h4>
-                  <p class="text-center">แอปพลิเคชันจาก Facebook</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #006AFF;"></i></span>เชื่อมต่อกับบัญชี Facebook</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #006AFF;"></i></span>มีฟิลเตอร์และเอฟเฟกต์</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #006AFF;"></i></span>เล่นเกมร่วมกันได้</li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
 
-        <!-- การประชุมออนไลน์ -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-video text-info me-2"></i>การประชุมออนไลน์</h3>
-          </div>
-          <div class="card-body">
-            <div class="row g-4">
-              <!-- Zoom -->
-              <div class="col-md-4">
-                <div class="app-card p-4 h-100">
-                  <div class="app-icon text-center" style="color: #2D8CFF;">
-                    <i class="fas fa-video"></i>
+          <!-- การประชุมออนไลน์ -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-video text-info me-2"></i>การประชุมออนไลน์
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+                <!-- Zoom -->
+                <div class="col-md-4">
+                  <div class="app-card p-4 h-100">
+                    <div class="app-icon text-center" style="color: #2d8cff">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <h4 class="text-center">Zoom</h4>
+                    <p class="text-center">แพลตฟอร์มประชุมออนไลน์ยอดนิยม</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #2d8cff"
+                          ></i></span
+                        >รองรับผู้เข้าร่วมจำนวนมาก
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #2d8cff"
+                          ></i></span
+                        >แชร์หน้าจอได้
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #2d8cff"
+                          ></i></span
+                        >มีห้องย่อย (Breakout Rooms)
+                      </li>
+                    </ul>
                   </div>
-                  <h4 class="text-center">Zoom</h4>
-                  <p class="text-center">แพลตฟอร์มประชุมออนไลน์ยอดนิยม</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #2D8CFF;"></i></span>รองรับผู้เข้าร่วมจำนวนมาก</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #2D8CFF;"></i></span>แชร์หน้าจอได้</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #2D8CFF;"></i></span>มีห้องย่อย (Breakout Rooms)</li>
-                  </ul>
+                </div>
+
+                <!-- Google Meet -->
+                <div class="col-md-4">
+                  <div class="app-card p-4 h-100">
+                    <div class="app-icon text-center" style="color: #00897b">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <h4 class="text-center">Google Meet</h4>
+                    <p class="text-center">บริการจาก Google</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #00897b"
+                          ></i></span
+                        >บูรณาการกับ Google Calendar
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #00897b"
+                          ></i></span
+                        >ใช้งานผ่านเบราว์เซอร์ได้
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #00897b"
+                          ></i></span
+                        >รองรับการแปลภาษาแบบเรียลไทม์
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Microsoft Teams -->
+                <div class="col-md-4">
+                  <div class="app-card p-4 h-100">
+                    <div class="app-icon text-center" style="color: #6355a8">
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="text-center">Microsoft Teams</h4>
+                    <p class="text-center">แพลตฟอร์มสำหรับทีมงาน</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #6355a8"
+                          ></i></span
+                        >รวมเครื่องมือทำงานเป็นทีม
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #6355a8"
+                          ></i></span
+                        >แชร์และแก้ไขไฟล์ร่วมกัน
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #6355a8"
+                          ></i></span
+                        >เชื่อมต่อกับ Office 365
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              
-              <!-- Google Meet -->
-              <div class="col-md-4">
-                <div class="app-card p-4 h-100">
-                  <div class="app-icon text-center" style="color: #00897B;">
-                    <i class="fas fa-video"></i>
-                  </div>
-                  <h4 class="text-center">Google Meet</h4>
-                  <p class="text-center">บริการจาก Google</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #00897B;"></i></span>บูรณาการกับ Google Calendar</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #00897B;"></i></span>ใช้งานผ่านเบราว์เซอร์ได้</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #00897B;"></i></span>รองรับการแปลภาษาแบบเรียลไทม์</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- Microsoft Teams -->
-              <div class="col-md-4">
-                <div class="app-card p-4 h-100">
-                  <div class="app-icon text-center" style="color: #6355A8;">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <h4 class="text-center">Microsoft Teams</h4>
-                  <p class="text-center">แพลตฟอร์มสำหรับทีมงาน</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #6355A8;"></i></span>รวมเครื่องมือทำงานเป็นทีม</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #6355A8;"></i></span>แชร์และแก้ไขไฟล์ร่วมกัน</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #6355A8;"></i></span>เชื่อมต่อกับ Office 365</li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
 
-        <!-- มารยาทในการสื่อสารออนไลน์ -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-user-shield text-info me-2"></i>มารยาทในการสื่อสารออนไลน์</h3>
-          </div>
-          <div class="card-body">
-            <div class="etiquette-card p-4">
-              <h4><i class="fas fa-comment text-success me-2"></i>หลักการสื่อสารพื้นฐาน</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ใช้ภาษาที่เหมาะสมกับบริบท</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ไม่ใช้ตัวอักษรใหญ่ทั้งหมด (เพราะเหมือนการตะโกน)</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ตอบกลับข้อความในเวลาที่เหมาะสม</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ไม่ส่งต่อข้อมูลที่ไม่แน่ใจว่าเป็นความจริง</li>
-              </ul>
-              
-              <h4 class="mt-4"><i class="fas fa-video text-success me-2"></i>มารยาทในการประชุมออนไลน์</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>เข้าประชุมตรงเวลา</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ปิดไมค์เมื่อไม่พูด</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>เตรียมอุปกรณ์ให้พร้อมก่อนเริ่ม</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>เลือกพื้นหลังที่เหมาะสม</li>
-              </ul>
+          <!-- มารยาทในการสื่อสารออนไลน์ -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-user-shield text-info me-2"></i
+                >มารยาทในการสื่อสารออนไลน์
+              </h3>
             </div>
-          </div>
-        </div>
+            <div class="card-body">
+              <div class="etiquette-card p-4">
+                <h4>
+                  <i class="fas fa-comment text-success me-2"></i
+                  >หลักการสื่อสารพื้นฐาน
+                </h4>
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ใช้ภาษาที่เหมาะสมกับบริบท
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ไม่ใช้ตัวอักษรใหญ่ทั้งหมด (เพราะเหมือนการตะโกน)
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ตอบกลับข้อความในเวลาที่เหมาะสม
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ไม่ส่งต่อข้อมูลที่ไม่แน่ใจว่าเป็นความจริง
+                  </li>
+                </ul>
 
-        <!-- กิจกรรมการเรียนรู้ -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-tasks text-info me-2"></i>กิจกรรมการเรียนรู้</h3>
-          </div>
-          <div class="card-body">
-            <div class="activity-card p-4 mb-4" style="border-left-color: #0dcaf0;">
-              <h4><i class="fas fa-comments text-info me-2"></i>กิจกรรมที่ 1: สร้างกลุ่มสนทนา</h4>
-              <p>ให้นักเรียนสร้างกลุ่มสนทนากับเพื่อนในชั้นเรียนและปฏิบัติตามมารยาทดังนี้:</p>
-              <ol>
-                <li>ตั้งชื่อกลุ่มให้เหมาะสม</li>
-                <li>ส่งข้อความทักทายอย่างสุภาพ</li>
-                <li>ไม่ส่งข้อความหรือสื่อที่ไม่เหมาะสม</li>
-                <li>ไม่ส่งข้อความเวลากลางคืน</li>
-              </ol>
-            </div>
-            
-            <div class="activity-card p-4">
-              <h4><i class="fas fa-video text-info me-2"></i>กิจกรรมที่ 2: ประชุมออนไลน์</h4>
-              <p>ให้นักเรียนจัดประชุมออนไลน์กับเพื่อนกลุ่มเล็กและปฏิบัติตามมารยาท:</p>
-              <div class="form-check mt-3">
-                <input class="form-check-input" type="checkbox" id="meeting1">
-                <label class="form-check-label" for="meeting1">เข้าห้องประชุมตรงเวลา</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="meeting2">
-                <label class="form-check-label" for="meeting2">ปิดไมค์เมื่อไม่พูด</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="meeting3">
-                <label class="form-check-label" for="meeting3">ใช้คำพูดที่สุภาพ</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="meeting4">
-                <label class="form-check-label" for="meeting4">ไม่พูดแทรกผู้อื่น</label>
+                <h4 class="mt-4">
+                  <i class="fas fa-video text-success me-2"></i
+                  >มารยาทในการประชุมออนไลน์
+                </h4>
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >เข้าประชุมตรงเวลา
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ปิดไมค์เมื่อไม่พูด
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >เตรียมอุปกรณ์ให้พร้อมก่อนเริ่ม
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >เลือกพื้นหลังที่เหมาะสม
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- ปุ่มนำทาง -->
-        <div class="d-flex justify-content-between mb-5">
-          <a href="unit3-2.html" class="btn btn-outline-secondary btn-lg">
-            <i class="fas fa-arrow-left me-2"></i>บทก่อนหน้า: การค้นหาข้อมูล
-          </a>
-          <a href="unit3-4.html" class="btn btn-info btn-lg">
-            บทต่อไป: จดหมายอิเล็กทรอนิกส์ <i class="fas fa-arrow-right me-2"></i>
-          </a>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
-  </div>
 
-  <div id="footer-content"></div>
+    <div id="footer-content"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

@@ -1,297 +1,371 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div id="head-content"></div>
-  <style>
-    /* สไตล์เฉพาะสำหรับบทเรียนเครือข่ายคอมพิวเตอร์ */
-    .lesson-header {
-      background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
-      border-radius: 12px;
-      color: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .network-type-card {
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-    }
-    
-    .network-type-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    
-    .network-type-card.lan {
-      border-left: 5px solid #4e54c8;
-    }
-    
-    .network-type-card.wan {
-      border-left: 5px solid #11998e;
-    }
-    
-    .network-type-card.internet {
-      border-left: 5px solid #f46b45;
-    }
-    
-    .network-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .safety-tips {
-      background-color: #f8f9fa;
-      border-radius: 12px;
-      padding: 1.5rem;
-      border-left: 5px solid #ffc107;
-    }
-    
-    .component-card {
-      text-align: center;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      height: 100%;
-    }
-    
-    .component-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .component-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--primary-color);
-    }
-    
-    .activity-card {
-      border-radius: 12px;
-      border-left: 5px solid #0dcaf0;
-      background-color: rgba(13, 202, 240, 0.05);
-    }
-    
-    @media (max-width: 768px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div id="head-content"></div>
+    <style>
+      /* สไตล์เฉพาะสำหรับบทเรียนเครือข่ายคอมพิวเตอร์ */
       .lesson-header {
-        padding: 1.5rem;
+        background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+        border-radius: 12px;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
       }
-      
+
+      .network-type-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .network-type-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .network-type-card.lan {
+        border-left: 5px solid #4e54c8;
+      }
+
+      .network-type-card.wan {
+        border-left: 5px solid #11998e;
+      }
+
+      .network-type-card.internet {
+        border-left: 5px solid #f46b45;
+      }
+
       .network-icon {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <div id="navbar-content"></div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div id="sidebar-content"></div>
+      .safety-tips {
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        padding: 1.5rem;
+        border-left: 5px solid #ffc107;
+      }
 
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <!-- ส่วนหัวบทเรียน -->
-        <section class="lesson-header">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <div class="d-flex align-items-center mb-3">
-                <h1 class="mb-0">เครือข่ายคอมพิวเตอร์</h1>
-              </div>
-              <p class="lead mb-0">พื้นฐานเครือข่ายและอินเทอร์เน็ตสำหรับการเรียนรู้ในยุคดิจิทัล</p>
-            </div>
-            <div class="col-md-4 d-none d-md-block text-center">
-              <i class="fas fa-network-wired fa-4x" style="opacity: 0.8;"></i>
-            </div>
+      .component-card {
+        text-align: center;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .component-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .component-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+      }
+
+      .activity-card {
+        border-radius: 12px;
+        border-left: 5px solid #0dcaf0;
+        background-color: rgba(13, 202, 240, 0.05);
+      }
+
+      @media (max-width: 768px) {
+        .lesson-header {
+          padding: 1.5rem;
+        }
+
+        .network-icon {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-content"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar-content"></div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- ส่วนหัวบทเรียน -->
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">หน่วยที่ 3: เครือข่ายคอมพิวเตอร์</h1>
           </div>
-        </section>
+          <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="unit3.html">หน่วยที่ 3</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                เครือข่ายคอมพิวเตอร์
+              </li>
+            </ol>
+          </nav>
 
-        <!-- ประเภทของเครือข่าย -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-network-wired text-primary me-2"></i>ประเภทของเครือข่ายคอมพิวเตอร์</h3>
-          </div>
-          <div class="card-body">
-            <div class="row g-4">
-              <!-- LAN -->
-              <div class="col-md-4">
-                <div class="network-type-card lan p-4 h-100">
-                  <div class="network-icon text-center text-primary">
-                    <i class="fas fa-home"></i>
+          <!-- ประเภทของเครือข่าย -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-network-wired text-primary me-2"></i
+                >ประเภทของเครือข่ายคอมพิวเตอร์
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+                <!-- LAN -->
+                <div class="col-md-4">
+                  <div class="network-type-card lan p-4 h-100">
+                    <div class="network-icon text-center text-primary">
+                      <i class="fas fa-home"></i>
+                    </div>
+                    <h4 class="text-center">LAN (Local Area Network)</h4>
+                    <p class="text-center">
+                      เครือข่ายท้องถิ่นที่เชื่อมต่อคอมพิวเตอร์ในพื้นที่ใกล้กัน
+                      เช่น ในบ้าน โรงเรียน หรือสำนักงาน
+                    </p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-primary"
+                          ></i></span
+                        >ระยะทางไม่เกิน 1 กิโลเมตร
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-primary"
+                          ></i></span
+                        >ความเร็วสูง
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-primary"
+                          ></i></span
+                        >ต้นทุนต่ำ
+                      </li>
+                    </ul>
                   </div>
-                  <h4 class="text-center">LAN (Local Area Network)</h4>
-                  <p class="text-center">เครือข่ายท้องถิ่นที่เชื่อมต่อคอมพิวเตอร์ในพื้นที่ใกล้กัน เช่น ในบ้าน โรงเรียน หรือสำนักงาน</p>
+                </div>
+
+                <!-- WAN -->
+                <div class="col-md-4">
+                  <div class="network-type-card wan p-4 h-100">
+                    <div class="network-icon text-center text-success">
+                      <i class="fas fa-globe"></i>
+                    </div>
+                    <h4 class="text-center">WAN (Wide Area Network)</h4>
+                    <p class="text-center">
+                      เครือข่ายระยะไกลที่เชื่อมต่อเครือข่ายในพื้นที่ห่างไกลกัน
+                      เช่น ระหว่างสาขาของบริษัท
+                    </p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-success"
+                          ></i></span
+                        >ครอบคลุมพื้นที่กว้าง
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-success"
+                          ></i></span
+                        >ใช้โครงข่ายสาธารณะ
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-success"
+                          ></i></span
+                        >ความเร็วปานกลาง
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- อินเทอร์เน็ต -->
+                <div class="col-md-4">
+                  <div class="network-type-card internet p-4 h-100">
+                    <div class="network-icon text-center text-danger">
+                      <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4 class="text-center">อินเทอร์เน็ต</h4>
+                    <p class="text-center">
+                      เครือข่ายขนาดใหญ่ที่เชื่อมต่อคอมพิวเตอร์ทั่วโลกเข้าด้วยกัน
+                    </p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-danger"></i></span
+                        >เชื่อมต่อทั่วโลก
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-danger"></i></span
+                        >ใช้โปรโตคอล TCP/IP
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-danger"></i></span
+                        >บริการหลากหลาย
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ความปลอดภัยบนเครือข่าย -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-shield-alt text-primary me-2"></i
+                >ความปลอดภัยบนเครือข่าย
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h4>
+                    <i class="fas fa-exclamation-triangle text-danger me-2"></i
+                    >ภัยคุกคามหลัก
+                  </h4>
                   <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ระยะทางไม่เกิน 1 กิโลเมตร</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ความเร็วสูง</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ต้นทุนต่ำ</li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-bug text-danger"></i></span
+                      >ไวรัสและมัลแวร์
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-user-secret text-danger"></i></span
+                      >การโจรกรรมข้อมูล
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-mask text-danger"></i></span
+                      >การแอบอ้างเป็นบุคคลอื่น
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-fish text-danger"></i></span
+                      >การโจมตีแบบ Phishing
+                    </li>
                   </ul>
                 </div>
-              </div>
-              
-              <!-- WAN -->
-              <div class="col-md-4">
-                <div class="network-type-card wan p-4 h-100">
-                  <div class="network-icon text-center text-success">
-                    <i class="fas fa-globe"></i>
+                <div class="col-md-6">
+                  <div class="safety-tips">
+                    <h4>
+                      <i class="fas fa-lightbulb text-warning me-2"></i
+                      >วิธีการป้องกัน
+                    </h4>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-key text-warning"></i></span
+                        >ใช้รหัสผ่านที่แข็งแรงและเปลี่ยนเป็นประจำ
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-shield-virus text-warning"
+                          ></i></span
+                        >ติดตั้งและอัปเดตโปรแกรมป้องกันไวรัส
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-link-slash text-warning"></i></span
+                        >ระวังการคลิกลิงก์หรือเปิดไฟล์จากแหล่งไม่น่าเชื่อถือ
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-lock text-warning"></i></span
+                        >ใช้การยืนยันตัวตนสองขั้นตอน (2FA)
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-save text-warning"></i></span
+                        >สำรองข้อมูลสำคัญเป็นประจำ
+                      </li>
+                    </ul>
                   </div>
-                  <h4 class="text-center">WAN (Wide Area Network)</h4>
-                  <p class="text-center">เครือข่ายระยะไกลที่เชื่อมต่อเครือข่ายในพื้นที่ห่างไกลกัน เช่น ระหว่างสาขาของบริษัท</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>ครอบคลุมพื้นที่กว้าง</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>ใช้โครงข่ายสาธารณะ</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-success"></i></span>ความเร็วปานกลาง</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- อินเทอร์เน็ต -->
-              <div class="col-md-4">
-                <div class="network-type-card internet p-4 h-100">
-                  <div class="network-icon text-center text-danger">
-                    <i class="fas fa-cloud"></i>
-                  </div>
-                  <h4 class="text-center">อินเทอร์เน็ต</h4>
-                  <p class="text-center">เครือข่ายขนาดใหญ่ที่เชื่อมต่อคอมพิวเตอร์ทั่วโลกเข้าด้วยกัน</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>เชื่อมต่อทั่วโลก</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>ใช้โปรโตคอล TCP/IP</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>บริการหลากหลาย</li>
-                  </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- ความปลอดภัยบนเครือข่าย -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-shield-alt text-primary me-2"></i>ความปลอดภัยบนเครือข่าย</h3>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-6">
-                <h4><i class="fas fa-exclamation-triangle text-danger me-2"></i>ภัยคุกคามหลัก</h4>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fas fa-bug text-danger"></i></span>ไวรัสและมัลแวร์</li>
-                  <li><span class="fa-li"><i class="fas fa-user-secret text-danger"></i></span>การโจรกรรมข้อมูล</li>
-                  <li><span class="fa-li"><i class="fas fa-mask text-danger"></i></span>การแอบอ้างเป็นบุคคลอื่น</li>
-                  <li><span class="fa-li"><i class="fas fa-fish text-danger"></i></span>การโจมตีแบบ Phishing</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <div class="safety-tips">
-                  <h4><i class="fas fa-lightbulb text-warning me-2"></i>วิธีการป้องกัน</h4>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-key text-warning"></i></span>ใช้รหัสผ่านที่แข็งแรงและเปลี่ยนเป็นประจำ</li>
-                    <li><span class="fa-li"><i class="fas fa-shield-virus text-warning"></i></span>ติดตั้งและอัปเดตโปรแกรมป้องกันไวรัส</li>
-                    <li><span class="fa-li"><i class="fas fa-link-slash text-warning"></i></span>ระวังการคลิกลิงก์หรือเปิดไฟล์จากแหล่งไม่น่าเชื่อถือ</li>
-                    <li><span class="fa-li"><i class="fas fa-lock text-warning"></i></span>ใช้การยืนยันตัวตนสองขั้นตอน (2FA)</li>
-                    <li><span class="fa-li"><i class="fas fa-save text-warning"></i></span>สำรองข้อมูลสำคัญเป็นประจำ</li>
-                  </ul>
-                </div>
-              </div>
+          <!-- ส่วนประกอบของเครือข่าย -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-server text-primary me-2"></i
+                >ส่วนประกอบพื้นฐานของเครือข่าย
+              </h3>
             </div>
-          </div>
-        </div>
-
-        <!-- ส่วนประกอบของเครือข่าย -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-server text-primary me-2"></i>ส่วนประกอบพื้นฐานของเครือข่าย</h3>
-          </div>
-          <div class="card-body">
-            <div class="row g-4">
-              <div class="col-md-4">
-                <div class="component-card">
-                  <div class="component-icon">
-                    <i class="fas fa-wifi"></i>
+            <div class="card-body">
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="component-card">
+                    <div class="component-icon">
+                      <i class="fas fa-wifi"></i>
+                    </div>
+                    <h5>อุปกรณ์เครือข่าย</h5>
+                    <p>เราเตอร์, สวิตช์, โมเด็ม, การ์ดเครือข่าย</p>
                   </div>
-                  <h5>อุปกรณ์เครือข่าย</h5>
-                  <p>เราเตอร์, สวิตช์, โมเด็ม, การ์ดเครือข่าย</p>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="component-card">
-                  <div class="component-icon">
-                    <i class="fas fa-plug"></i>
+                <div class="col-md-4">
+                  <div class="component-card">
+                    <div class="component-icon">
+                      <i class="fas fa-plug"></i>
+                    </div>
+                    <h5>สื่อกลางการเชื่อมต่อ</h5>
+                    <p>สายเคเบิล, สัญญาณ WiFi, ไฟเบอร์ออปติก</p>
                   </div>
-                  <h5>สื่อกลางการเชื่อมต่อ</h5>
-                  <p>สายเคเบิล, สัญญาณ WiFi, ไฟเบอร์ออปติก</p>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="component-card">
-                  <div class="component-icon">
-                    <i class="fas fa-laptop-code"></i>
+                <div class="col-md-4">
+                  <div class="component-card">
+                    <div class="component-icon">
+                      <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h5>โปรโตคอล</h5>
+                    <p>TCP/IP, HTTP, FTP, DNS</p>
                   </div>
-                  <h5>โปรโตคอล</h5>
-                  <p>TCP/IP, HTTP, FTP, DNS</p>
                 </div>
               </div>
-            </div>
-            
-            <div class="alert alert-info mt-4">
-              <i class="fas fa-info-circle me-2"></i>
-              โปรโตคอล TCP/IP เป็นมาตรฐานหลักที่ใช้ในการสื่อสารบนอินเทอร์เน็ตในปัจจุบัน
-            </div>
-          </div>
-        </div>
-        <div class="video-container my-4">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/scratch-intro" allowfullscreen></iframe>
-          </div>
-        </div>
 
-        <!-- กิจกรรมการเรียนรู้ -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-tasks text-primary me-2"></i>กิจกรรมการเรียนรู้</h3>
-          </div>
-          <div class="card-body">
-            <div class="activity-card p-4 mb-4">
-              <h4><i class="fas fa-search text-info me-2"></i>กิจกรรมที่ 1: สำรวจเครือข่ายรอบตัว</h4>
-              <p>ให้นักเรียนสำรวจและบันทึกว่าเครือข่ายคอมพิวเตอร์ประเภทใดบ้างที่ใช้ในชีวิตประจำวัน เช่น ที่บ้าน โรงเรียน หรือสถานที่สาธารณะ</p>
-              <textarea class="form-control mt-3" rows="4" placeholder="เขียนผลการสำรวจของนักเรียนที่นี่..."></textarea>
-            </div>
-            
-            <div class="activity-card p-4">
-              <h4><i class="fas fa-shield-alt text-info me-2"></i>กิจกรรมที่ 2: ตรวจสอบความปลอดภัย</h4>
-              <p>ให้นักเรียนตรวจสอบและประเมินความปลอดภัยของเครือข่ายที่ใช้อยู่ตามเกณฑ์ต่อไปนี้:</p>
-              <div class="form-check mt-3">
-                <input class="form-check-input" type="checkbox" id="safe1">
-                <label class="form-check-label" for="safe1">มีการใช้รหัสผ่านที่แข็งแรงหรือไม่</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="safe2">
-                <label class="form-check-label" for="safe2">มีการอัปเดตซอฟต์แวร์เป็นประจำหรือไม่</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="safe3">
-                <label class="form-check-label" for="safe3">มีการใช้โปรแกรมป้องกันไวรัสหรือไม่</label>
+              <div class="alert alert-info mt-4">
+                <i class="fas fa-info-circle me-2"></i>
+                โปรโตคอล TCP/IP
+                เป็นมาตรฐานหลักที่ใช้ในการสื่อสารบนอินเทอร์เน็ตในปัจจุบัน
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- ปุ่มนำทาง -->
-        <div class="d-flex justify-content-between mb-5">
-          <a href="unit3.html" class="btn btn-outline-secondary btn-lg">
-            <i class="fas fa-arrow-left me-2"></i>กลับไปหน้ารวมเนื้อหา
-          </a>
-          <a href="unit3-2.html" class="btn btn-primary btn-lg">
-            บทต่อไป: การค้นหาข้อมูล <i class="fas fa-arrow-right me-2"></i>
-          </a>
-        </div>
-      </main>
+          <div class="video-container my-4">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/scratch-intro"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-  </div>
 
-  <div id="footer-content"></div>
+    <div id="footer-content"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

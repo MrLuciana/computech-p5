@@ -1,223 +1,304 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div id="head-content"></div>
-  <style>
-    /* สไตล์เฉพาะสำหรับบทเรียนโซเชียลมีเดีย */
-    .lesson-header {
-      background: linear-gradient(135deg, #dc3545 0%, #a71d2a 100%);
-      border-radius: 12px;
-      color: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .social-card {
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      border-left: 5px solid #dc3545;
-    }
-    
-    .social-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    
-    .social-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .safety-card {
-      border-radius: 12px;
-      border-left: 5px solid #198754;
-      background-color: rgba(25, 135, 84, 0.05);
-    }
-    
-    @media (max-width: 768px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div id="head-content"></div>
+    <style>
+      /* สไตล์เฉพาะสำหรับบทเรียนโซเชียลมีเดีย */
       .lesson-header {
-        padding: 1.5rem;
+        background: linear-gradient(135deg, #dc3545 0%, #a71d2a 100%);
+        border-radius: 12px;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
       }
-      
+
+      .social-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        border-left: 5px solid #dc3545;
+      }
+
+      .social-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
       .social-icon {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <div id="navbar-content"></div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div id="sidebar-content"></div>
+      .safety-card {
+        border-radius: 12px;
+        border-left: 5px solid #198754;
+        background-color: rgba(25, 135, 84, 0.05);
+      }
 
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <!-- ส่วนหัวบทเรียน -->
-        <section class="lesson-header">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <div class="d-flex align-items-center mb-3">
-                <h1 class="mb-0">สื่อสังคมออนไลน์</h1>
-              </div>
-              <p class="lead mb-0">การใช้โซเชียลมีเดียอย่างปลอดภัยและสร้างสรรค์</p>
-            </div>
-            <div class="col-md-4 d-none d-md-block text-center">
-              <i class="fas fa-share-alt fa-4x" style="opacity: 0.8;"></i>
-            </div>
+      @media (max-width: 768px) {
+        .lesson-header {
+          padding: 1.5rem;
+        }
+
+        .social-icon {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-content"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar-content"></div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- ส่วนหัวบทเรียน -->
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">หน่วยที่ 3: สื่อสังคมออนไลน์</h1>
           </div>
-        </section>
+          <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="unit3.html">หน่วยที่ 3</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                สื่อสังคมออนไลน์
+              </li>
+            </ol>
+          </nav>
 
-        <!-- แพลตฟอร์มโซเชียลมีเดีย -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-thumbs-up text-danger me-2"></i>แพลตฟอร์มโซเชียลมีเดียยอดนิยม</h3>
-          </div>
-          <div class="card-body">
-            <div class="row g-4">
-              <!-- Facebook -->
-              <div class="col-md-4">
-                <div class="social-card p-4 h-100">
-                  <div class="social-icon text-center" style="color: #3b5998;">
-                    <i class="fab fa-facebook"></i>
+          <!-- แพลตฟอร์มโซเชียลมีเดีย -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-thumbs-up text-danger me-2"></i
+                >แพลตฟอร์มโซเชียลมีเดียยอดนิยม
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+                <!-- Facebook -->
+                <div class="col-md-4">
+                  <div class="social-card p-4 h-100">
+                    <div class="social-icon text-center" style="color: #3b5998">
+                      <i class="fab fa-facebook"></i>
+                    </div>
+                    <h4 class="text-center">Facebook</h4>
+                    <p class="text-center">
+                      แพลตฟอร์มโซเชียลมีเดียที่ใหญ่ที่สุด
+                    </p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #3b5998"
+                          ></i></span
+                        >เชื่อมต่อกับเพื่อนและครอบครัว
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #3b5998"
+                          ></i></span
+                        >แบ่งปันรูปภาพและเรื่องราว
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #3b5998"
+                          ></i></span
+                        >เข้าร่วมกลุ่มตามความสนใจ
+                      </li>
+                    </ul>
                   </div>
-                  <h4 class="text-center">Facebook</h4>
-                  <p class="text-center">แพลตฟอร์มโซเชียลมีเดียที่ใหญ่ที่สุด</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #3b5998;"></i></span>เชื่อมต่อกับเพื่อนและครอบครัว</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #3b5998;"></i></span>แบ่งปันรูปภาพและเรื่องราว</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #3b5998;"></i></span>เข้าร่วมกลุ่มตามความสนใจ</li>
-                  </ul>
+                </div>
+
+                <!-- Instagram -->
+                <div class="col-md-4">
+                  <div class="social-card p-4 h-100">
+                    <div
+                      class="social-icon text-center"
+                      style="
+                        background: linear-gradient(
+                          45deg,
+                          #405de6,
+                          #5851db,
+                          #833ab4,
+                          #c13584,
+                          #e1306c,
+                          #fd1d1d
+                        );
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                      "
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </div>
+                    <h4 class="text-center">Instagram</h4>
+                    <p class="text-center">แพลตฟอร์มแบ่งปันรูปภาพและวิดีโอ</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #c13584"
+                          ></i></span
+                        >เน้นการแบ่งปันภาพถ่าย
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #c13584"
+                          ></i></span
+                        >มีฟิลเตอร์และเครื่องมือแก้ไข
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #c13584"
+                          ></i></span
+                        >มีฟีเจอร์ Stories และ Reels
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Twitter -->
+                <div class="col-md-4">
+                  <div class="social-card p-4 h-100">
+                    <div class="social-icon text-center" style="color: #1da1f2">
+                      <i class="fab fa-twitter"></i>
+                    </div>
+                    <h4 class="text-center">Twitter</h4>
+                    <p class="text-center">แพลตฟอร์มสำหรับเผยแพร่ข้อความสั้น</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #1da1f2"
+                          ></i></span
+                        >จำกัด 280 ตัวอักษรต่อทวีต
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #1da1f2"
+                          ></i></span
+                        >ใช้แฮชแท็ก (#) เพื่อจัดกลุ่มเนื้อหา
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle"
+                            style="color: #1da1f2"
+                          ></i></span
+                        >เหมาะสำหรับติดตามข่าวสาร
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              
-              <!-- Instagram -->
-              <div class="col-md-4">
-                <div class="social-card p-4 h-100">
-                  <div class="social-icon text-center" style="background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                  <h4 class="text-center">Instagram</h4>
-                  <p class="text-center">แพลตฟอร์มแบ่งปันรูปภาพและวิดีโอ</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #C13584;"></i></span>เน้นการแบ่งปันภาพถ่าย</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #C13584;"></i></span>มีฟิลเตอร์และเครื่องมือแก้ไข</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #C13584;"></i></span>มีฟีเจอร์ Stories และ Reels</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- Twitter -->
-              <div class="col-md-4">
-                <div class="social-card p-4 h-100">
-                  <div class="social-icon text-center" style="color: #1da1f2;">
-                    <i class="fab fa-twitter"></i>
-                  </div>
-                  <h4 class="text-center">Twitter</h4>
-                  <p class="text-center">แพลตฟอร์มสำหรับเผยแพร่ข้อความสั้น</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #1da1f2;"></i></span>จำกัด 280 ตัวอักษรต่อทวีต</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #1da1f2;"></i></span>ใช้แฮชแท็ก (#) เพื่อจัดกลุ่มเนื้อหา</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle" style="color: #1da1f2;"></i></span>เหมาะสำหรับติดตามข่าวสาร</li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
 
-        <!-- ข้อควรระวังในการใช้โซเชียลมีเดีย -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-exclamation-triangle text-danger me-2"></i>ข้อควรระวังในการใช้โซเชียลมีเดีย</h3>
-          </div>
-          <div class="card-body">
-            <div class="safety-card p-4">
-              <h4><i class="fas fa-user-secret text-success me-2"></i>ความเป็นส่วนตัว</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ตรวจสอบการตั้งค่าความเป็นส่วนตัวเป็นประจำ</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ไม่เปิดเผยข้อมูลส่วนตัวมากเกินไป</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ระวังการยอมรับคำขอเป็นเพื่อนจากคนแปลกหน้า</li>
-              </ul>
-              
-              <h4 class="mt-4"><i class="fas fa-bullhorn text-success me-2"></i>การโพสต์เนื้อหา</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>คิดก่อนโพสต์ - ข้อมูลบนอินเทอร์เน็ตอาจอยู่ตลอดไป</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ไม่โพสต์เนื้อหาที่อาจสร้างความเสียหายให้กับตนเองหรือผู้อื่น</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ตรวจสอบความถูกต้องของข้อมูลก่อนแชร์</li>
-              </ul>
-              
-              <h4 class="mt-4"><i class="fas fa-heart text-success me-2"></i>สุขภาพจิต</h4>
-              <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>จำกัดเวลาใช้โซเชียลมีเดีย</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ไม่เปรียบเทียบชีวิตตนเองกับผู้อื่นบนโซเชียล</li>
-                <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>รู้จักปิดการแจ้งเตือนเมื่อจำเป็น</li>
-              </ul>
+          <!-- ข้อควรระวังในการใช้โซเชียลมีเดีย -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-exclamation-triangle text-danger me-2"></i
+                >ข้อควรระวังในการใช้โซเชียลมีเดีย
+              </h3>
             </div>
-          </div>
-        </div>
+            <div class="card-body">
+              <div class="safety-card p-4">
+                <h4>
+                  <i class="fas fa-user-secret text-success me-2"></i
+                  >ความเป็นส่วนตัว
+                </h4>
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ตรวจสอบการตั้งค่าความเป็นส่วนตัวเป็นประจำ
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ไม่เปิดเผยข้อมูลส่วนตัวมากเกินไป
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ระวังการยอมรับคำขอเป็นเพื่อนจากคนแปลกหน้า
+                  </li>
+                </ul>
 
-        <!-- กิจกรรมการเรียนรู้ -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-tasks text-danger me-2"></i>กิจกรรมการเรียนรู้</h3>
-          </div>
-          <div class="card-body">
-            <div class="activity-card p-4 mb-4" style="border-left-color: #dc3545;">
-              <h4><i class="fas fa-share-alt text-danger me-2"></i>กิจกรรมที่ 1: วิเคราะห์โพสต์</h4>
-              <p>ให้นักเรียนเลือกโพสต์บนโซเชียลมีเดีย 1 โพสต์และวิเคราะห์ตามเกณฑ์ต่อไปนี้:</p>
-              <ol>
-                <li>โพสต์นี้มีประโยชน์หรือไม่</li>
-                <li>ข้อมูลในโพสต์น่าเชื่อถือหรือไม่</li>
-                <li>มีเนื้อหาที่อาจสร้างผลกระทบเชิงลบหรือไม่</li>
-                <li>ควรแชร์โพสต์นี้ต่อหรือไม่</li>
-              </ol>
-              <textarea class="form-control mt-3" rows="4" placeholder="เขียนผลการวิเคราะห์ของนักเรียนที่นี่..."></textarea>
-            </div>
-            
-            <div class="activity-card p-4" style="border-left-color: #198754;">
-              <h4><i class="fas fa-shield-alt text-success me-2"></i>กิจกรรมที่ 2: ตรวจสอบการตั้งค่าความปลอดภัย</h4>
-              <p>ให้นักเรียนตรวจสอบการตั้งค่าความปลอดภัยบนโซเชียลมีเดีย:</p>
-              <div class="form-check mt-3">
-                <input class="form-check-input" type="checkbox" id="privacy1">
-                <label class="form-check-label" for="privacy1">ตั้งค่าความเป็นส่วนตัวของโปรไฟล์</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="privacy2">
-                <label class="form-check-label" for="privacy2">ตรวจสอบแท็กก่อนแสดงในโปรไฟล์</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="privacy3">
-                <label class="form-check-label" for="privacy3">จำกัดการมองเห็นโพสต์เก่า</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="privacy4">
-                <label class="form-check-label" for="privacy4">ตรวจสอบแอปพลิเคชันที่เชื่อมต่อ</label>
-              </div>
-            </div>
-          </div>
-        </div>
+                <h4 class="mt-4">
+                  <i class="fas fa-bullhorn text-success me-2"></i
+                  >การโพสต์เนื้อหา
+                </h4>
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >คิดก่อนโพสต์ - ข้อมูลบนอินเทอร์เน็ตอาจอยู่ตลอดไป
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ไม่โพสต์เนื้อหาที่อาจสร้างความเสียหายให้กับตนเองหรือผู้อื่น
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ตรวจสอบความถูกต้องของข้อมูลก่อนแชร์
+                  </li>
+                </ul>
 
-        <!-- ปุ่มนำทาง -->
-        <div class="d-flex justify-content-between mb-5">
-          <a href="unit3-4.html" class="btn btn-outline-secondary btn-lg">
-            <i class="fas fa-arrow-left me-2"></i>บทก่อนหน้า: จดหมายอิเล็กทรอนิกส์
-          </a>
-          <a href="unit3.html" class="btn btn-danger btn-lg">
-            กลับไปหน้ารวมเนื้อหา <i class="fas fa-home me-2"></i>
-          </a>
-        </div>
-      </main>
+                <h4 class="mt-4">
+                  <i class="fas fa-heart text-success me-2"></i>สุขภาพจิต
+                </h4>
+                <ul class="fa-ul">
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >จำกัดเวลาใช้โซเชียลมีเดีย
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >ไม่เปรียบเทียบชีวิตตนเองกับผู้อื่นบนโซเชียล
+                  </li>
+                  <li>
+                    <span class="fa-li"
+                      ><i class="fas fa-check text-success"></i></span
+                    >รู้จักปิดการแจ้งเตือนเมื่อจำเป็น
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-  </div>
 
-  <div id="footer-content"></div>
+    <div id="footer-content"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

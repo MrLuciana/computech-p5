@@ -1,257 +1,312 @@
 <!DOCTYPE html>
 <html lang="th">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <div id="head-content"></div>
-  <style>
-    /* สไตล์เฉพาะสำหรับบทเรียนอีเมล */
-    .lesson-header {
-      background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
-      border-radius: 12px;
-      color: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .email-card {
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      border-left: 5px solid #ffc107;
-    }
-    
-    .email-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    
-    .email-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .email-form {
-      background-color: #f8f9fa;
-      border-radius: 12px;
-      padding: 1.5rem;
-      border-left: 5px solid #0dcaf0;
-    }
-    
-    @media (max-width: 768px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <div id="head-content"></div>
+    <style>
+      /* สไตล์เฉพาะสำหรับบทเรียนอีเมล */
       .lesson-header {
-        padding: 1.5rem;
+        background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+        border-radius: 12px;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
       }
-      
+
+      .email-card {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        height: 100%;
+        border-left: 5px solid #ffc107;
+      }
+
+      .email-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
       .email-icon {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <div id="navbar-content"></div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div id="sidebar-content"></div>
+      .email-form {
+        background-color: #f8f9fa;
+        border-radius: 12px;
+        padding: 1.5rem;
+        border-left: 5px solid #0dcaf0;
+      }
 
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <!-- ส่วนหัวบทเรียน -->
-        <section class="lesson-header">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <div class="d-flex align-items-center mb-3">
-                <h1 class="mb-0">จดหมายอิเล็กทรอนิกส์</h1>
-              </div>
-              <p class="lead mb-0">การใช้และการจัดการอีเมลอย่างมืออาชีพ</p>
-            </div>
-            <div class="col-md-4 d-none d-md-block text-center">
-              <i class="fas fa-envelope fa-4x" style="opacity: 0.8;"></i>
-            </div>
+      @media (max-width: 768px) {
+        .lesson-header {
+          padding: 1.5rem;
+        }
+
+        .email-icon {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar-content"></div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar-content"></div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <!-- ส่วนหัวบทเรียน -->
+          <div
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">หน่วยที่ 3: จดหมายอิเล็กทรอนิกส์</h1>
           </div>
-        </section>
+          <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="unit3.html">หน่วยที่ 3</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                จดหมายอิเล็กทรอนิกส์
+              </li>
+            </ol>
+          </nav>
 
-        <!-- บริการอีเมลยอดนิยม -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-inbox text-warning me-2"></i>บริการอีเมลยอดนิยม</h3>
-          </div>
-          <div class="card-body">
-            <div class="row g-4">
-              <!-- Gmail -->
-              <div class="col-md-4">
-                <div class="email-card p-4 h-100">
-                  <div class="email-icon text-center text-danger">
-                    <i class="fab fa-google"></i>
+          <!-- บริการอีเมลยอดนิยม -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-inbox text-warning me-2"></i>บริการอีเมลยอดนิยม
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row g-4">
+                <!-- Gmail -->
+                <div class="col-md-4">
+                  <div class="email-card p-4 h-100">
+                    <div class="email-icon text-center text-danger">
+                      <i class="fab fa-google"></i>
+                    </div>
+                    <h4 class="text-center">Gmail</h4>
+                    <p class="text-center">บริการจาก Google</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-danger"></i></span
+                        >พื้นที่เก็บข้อมูลมาก
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-danger"></i></span
+                        >ป้องกันสแปมได้ดี
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-danger"></i></span
+                        >บูรณาการกับบริการอื่นของ Google
+                      </li>
+                    </ul>
                   </div>
-                  <h4 class="text-center">Gmail</h4>
-                  <p class="text-center">บริการจาก Google</p>
+                </div>
+
+                <!-- Outlook -->
+                <div class="col-md-4">
+                  <div class="email-card p-4 h-100">
+                    <div class="email-icon text-center text-primary">
+                      <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h4 class="text-center">Outlook</h4>
+                    <p class="text-center">บริการจาก Microsoft</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-primary"
+                          ></i></span
+                        >ออกแบบมาสำหรับผู้ใช้งานองค์กร
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-primary"
+                          ></i></span
+                        >มีปฏิทินและตารางงาน
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i
+                            class="fas fa-check-circle text-primary"
+                          ></i></span
+                        >เชื่อมต่อกับ Office 365
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Yahoo Mail -->
+                <div class="col-md-4">
+                  <div class="email-card p-4 h-100">
+                    <div class="email-icon text-center text-info">
+                      <i class="fab fa-yahoo"></i>
+                    </div>
+                    <h4 class="text-center">Yahoo Mail</h4>
+                    <p class="text-center">บริการอีเมลเก่าแก่</p>
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-info"></i></span
+                        >ใช้งานง่าย
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-info"></i></span
+                        >มีฟิลเตอร์อีเมล
+                      </li>
+                      <li>
+                        <span class="fa-li"
+                          ><i class="fas fa-check-circle text-info"></i></span
+                        >พื้นที่เก็บข้อมูลฟรี 1 TB
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ส่วนประกอบของอีเมล -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-envelope-open-text text-warning me-2"></i
+                >ส่วนประกอบของอีเมล
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="email-form">
+                <div class="mb-3">
+                  <label class="form-label">ถึง:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="กรอกที่อยู่อีเมลผู้รับ"
+                  />
+                  <small class="text-muted"
+                    >สามารถกรอกได้หลายที่อยู่โดยคั่นด้วยเครื่องหมาย ,</small
+                  >
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">เรื่อง:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="หัวข้อจดหมาย"
+                  />
+                  <small class="text-muted">ควรสรุปเนื้อหาอย่างกระชับ</small>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">เนื้อหา:</label>
+                  <textarea
+                    class="form-control"
+                    rows="5"
+                    placeholder="เขียนเนื้อหาจดหมาย"
+                  ></textarea>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">ไฟล์แนบ:</label>
+                  <input type="file" class="form-control" />
+                  <small class="text-muted">ขนาดไฟล์ไม่ควรเกิน 25MB</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- การเขียนอีเมลอย่างเป็นทางการ -->
+          <div class="card shadow-sm mb-4 border-0">
+            <div class="card-header bg-white border-0">
+              <h3 class="mb-0">
+                <i class="fas fa-pen-fancy text-warning me-2"></i
+                >การเขียนอีเมลอย่างเป็นทางการ
+              </h3>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <h4>
+                    <i class="fas fa-check-circle text-success me-2"></i
+                    >สิ่งที่ควรทำ
+                  </h4>
                   <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>พื้นที่เก็บข้อมูลมาก</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>ป้องกันสแปมได้ดี</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-danger"></i></span>บูรณาการกับบริการอื่นของ Google</li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-check text-success"></i></span
+                      >ใช้คำขึ้นต้นและลงท้ายที่เหมาะสม
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-check text-success"></i></span
+                      >เขียนเนื้อหาอย่างชัดเจนและกระชับ
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-check text-success"></i></span
+                      >ตรวจสอบตัวสะกดก่อนส่ง
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-check text-success"></i></span
+                      >ใช้ชื่อไฟล์แนบที่สื่อความหมาย
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h4>
+                    <i class="fas fa-times-circle text-danger me-2"></i
+                    >สิ่งที่ควรหลีกเลี่ยง
+                  </h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-times text-danger"></i></span
+                      >ใช้ภาษาพูดหรือคำย่อที่ไม่เป็นทางการ
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-times text-danger"></i></span
+                      >เขียนข้อความยาวเกินจำเป็น
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-times text-danger"></i></span
+                      >แนบไฟล์ขนาดใหญ่โดยไม่จำเป็น
+                    </li>
+                    <li>
+                      <span class="fa-li"
+                        ><i class="fas fa-times text-danger"></i></span
+                      >ตอบกลับอีเมลโดยไม่ลบข้อความเดิมที่ไม่เกี่ยวข้อง
+                    </li>
                   </ul>
                 </div>
               </div>
-              
-              <!-- Outlook -->
-              <div class="col-md-4">
-                <div class="email-card p-4 h-100">
-                  <div class="email-icon text-center text-primary">
-                    <i class="fab fa-microsoft"></i>
-                  </div>
-                  <h4 class="text-center">Outlook</h4>
-                  <p class="text-center">บริการจาก Microsoft</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>ออกแบบมาสำหรับผู้ใช้งานองค์กร</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>มีปฏิทินและตารางงาน</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>เชื่อมต่อกับ Office 365</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- Yahoo Mail -->
-              <div class="col-md-4">
-                <div class="email-card p-4 h-100">
-                  <div class="email-icon text-center text-info">
-                    <i class="fab fa-yahoo"></i>
-                  </div>
-                  <h4 class="text-center">Yahoo Mail</h4>
-                  <p class="text-center">บริการอีเมลเก่าแก่</p>
-                  <ul class="fa-ul">
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-info"></i></span>ใช้งานง่าย</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-info"></i></span>มีฟิลเตอร์อีเมล</li>
-                    <li><span class="fa-li"><i class="fas fa-check-circle text-info"></i></span>พื้นที่เก็บข้อมูลฟรี 1 TB</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- ส่วนประกอบของอีเมล -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-envelope-open-text text-warning me-2"></i>ส่วนประกอบของอีเมล</h3>
-          </div>
-          <div class="card-body">
-            <div class="email-form">
-              <div class="mb-3">
-                <label class="form-label">ถึง:</label>
-                <input type="text" class="form-control" placeholder="กรอกที่อยู่อีเมลผู้รับ">
-                <small class="text-muted">สามารถกรอกได้หลายที่อยู่โดยคั่นด้วยเครื่องหมาย ,</small>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">เรื่อง:</label>
-                <input type="text" class="form-control" placeholder="หัวข้อจดหมาย">
-                <small class="text-muted">ควรสรุปเนื้อหาอย่างกระชับ</small>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">เนื้อหา:</label>
-                <textarea class="form-control" rows="5" placeholder="เขียนเนื้อหาจดหมาย"></textarea>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">ไฟล์แนบ:</label>
-                <input type="file" class="form-control">
-                <small class="text-muted">ขนาดไฟล์ไม่ควรเกิน 25MB</small>
+              <div class="alert alert-info mt-4">
+                <i class="fas fa-lightbulb me-2"></i>
+                <strong>เคล็ดลับ:</strong>
+                ควรตรวจสอบที่อยู่อีเมลผู้รับให้ถูกต้องก่อนกดส่ง และใช้ CC
+                เมื่อต้องการส่งสำเนาให้ผู้อื่นทราบ
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- การเขียนอีเมลอย่างเป็นทางการ -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-pen-fancy text-warning me-2"></i>การเขียนอีเมลอย่างเป็นทางการ</h3>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-6">
-                <h4><i class="fas fa-check-circle text-success me-2"></i>สิ่งที่ควรทำ</h4>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ใช้คำขึ้นต้นและลงท้ายที่เหมาะสม</li>
-                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>เขียนเนื้อหาอย่างชัดเจนและกระชับ</li>
-                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ตรวจสอบตัวสะกดก่อนส่ง</li>
-                  <li><span class="fa-li"><i class="fas fa-check text-success"></i></span>ใช้ชื่อไฟล์แนบที่สื่อความหมาย</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <h4><i class="fas fa-times-circle text-danger me-2"></i>สิ่งที่ควรหลีกเลี่ยง</h4>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fas fa-times text-danger"></i></span>ใช้ภาษาพูดหรือคำย่อที่ไม่เป็นทางการ</li>
-                  <li><span class="fa-li"><i class="fas fa-times text-danger"></i></span>เขียนข้อความยาวเกินจำเป็น</li>
-                  <li><span class="fa-li"><i class="fas fa-times text-danger"></i></span>แนบไฟล์ขนาดใหญ่โดยไม่จำเป็น</li>
-                  <li><span class="fa-li"><i class="fas fa-times text-danger"></i></span>ตอบกลับอีเมลโดยไม่ลบข้อความเดิมที่ไม่เกี่ยวข้อง</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div class="alert alert-info mt-4">
-              <i class="fas fa-lightbulb me-2"></i>
-              <strong>เคล็ดลับ:</strong> ควรตรวจสอบที่อยู่อีเมลผู้รับให้ถูกต้องก่อนกดส่ง และใช้ CC เมื่อต้องการส่งสำเนาให้ผู้อื่นทราบ
-            </div>
-          </div>
-        </div>
-
-        <!-- กิจกรรมการเรียนรู้ -->
-        <div class="card shadow-sm mb-4 border-0">
-          <div class="card-header bg-white border-0">
-            <h3 class="mb-0"><i class="fas fa-tasks text-warning me-2"></i>กิจกรรมการเรียนรู้</h3>
-          </div>
-          <div class="card-body">
-            <div class="activity-card p-4 mb-4" style="border-left-color: #ffc107;">
-              <h4><i class="fas fa-envelope text-warning me-2"></i>กิจกรรมที่ 1: เขียนอีเมลถึงครู</h4>
-              <p>ให้นักเรียนเขียนอีเมลถึงครูโดยปฏิบัติตามหลักการดังนี้:</p>
-              <ol>
-                <li>ใช้คำขึ้นต้นและลงท้ายที่เหมาะสม</li>
-                <li>ระบุหัวข้อให้ชัดเจน</li>
-                <li>เขียนเนื้อหาอย่างสุภาพและกระชับ</li>
-                <li>ตรวจสอบตัวสะกดก่อนส่ง</li>
-              </ol>
-              <textarea class="form-control mt-3" rows="4" placeholder="เขียนอีเมลของนักเรียนที่นี่..."></textarea>
-            </div>
-            
-            <div class="activity-card p-4" style="border-left-color: #0dcaf0;">
-              <h4><i class="fas fa-inbox text-info me-2"></i>กิจกรรมที่ 2: จัดการกล่องจดหมาย</h4>
-              <p>ให้นักเรียนฝึกจัดการกล่องจดหมายตามขั้นตอนต่อไปนี้:</p>
-              <div class="form-check mt-3">
-                <input class="form-check-input" type="checkbox" id="inbox1">
-                <label class="form-check-label" for="inbox1">สร้างป้ายกำกับ (Label) สำหรับอีเมลประเภทต่างๆ</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="inbox2">
-                <label class="form-check-label" for="inbox2">ลบอีเมลที่ไม่จำเป็น</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="inbox3">
-                <label class="form-check-label" for="inbox3">ตั้งค่าการกรองอีเมลอัตโนมัติ</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="inbox4">
-                <label class="form-check-label" for="inbox4">จัดเก็บอีเมลสำคัญไว้ในโฟลเดอร์</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ปุ่มนำทาง -->
-        <div class="d-flex justify-content-between mb-5">
-          <a href="unit3-3.html" class="btn btn-outline-secondary btn-lg">
-            <i class="fas fa-arrow-left me-2"></i>บทก่อนหน้า: การติดต่อสื่อสาร
-          </a>
-          <a href="unit3-5.html" class="btn btn-warning btn-lg">
-            บทต่อไป: สื่อสังคมออนไลน์ <i class="fas fa-arrow-right me-2"></i>
-          </a>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
-  </div>
 
-  <div id="footer-content"></div>
+    <div id="footer-content"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
