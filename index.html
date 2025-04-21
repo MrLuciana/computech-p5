@@ -15,9 +15,74 @@
 
       <!-- ส่วนเนื้อหาหลัก -->
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">ยินดีต้อนรับสู่เว็บไซต์การเรียนรู้</h1>
+        <div class="welcome-header">
+          <div class="container-fluid px-4 py-5 text-center text-md-start">
+            <div class="row align-items-center g-5">
+              <div class="col text-center ">
+                <h1 class="display-4 fw-bold mb-3 text-gradient-primary">
+                  ยินดีต้อนรับสู่เว็บไซต์การเรียนรู้
+                </h1>
+              </div>
+            </div>
+          </div>
         </div>
+        
+        <style>
+          .welcome-header {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            position: relative;
+          }
+          
+          .welcome-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(13,110,253,0.05) 0%, rgba(255,255,255,0) 100%);
+            z-index: 0;
+          }
+          
+          .text-gradient-primary {
+            background: linear-gradient(135deg, #0d6efd 0%, #20c997 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+          }
+          
+          .welcome-illustration {
+            padding: 1rem;
+            animation: float 6s ease-in-out infinite;
+          }
+          
+          @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+          }
+          
+          @media (max-width: 768px) {
+            .welcome-header {
+              text-align: center;
+            }
+            
+            .display-4 {
+              font-size: 2.5rem;
+            }
+            
+            .btn-lg {
+              padding: 0.5rem 1rem;
+              font-size: 1rem;
+            }
+          }
+        </style>
+        
         
         <div class="row">
           <div class="col-md-4 mb-4">
