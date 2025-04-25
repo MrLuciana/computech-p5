@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ทีมครูผู้สอน | โรงเรียนตัวอย่าง</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/teacher.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <div id="head-content"></div>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-content"></div>
+
+  <!-- Hero Banner -->
+  <section class="teacher-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>ทีมครูผู้สอนคุณภาพ</h1>
+        <p>ผู้สร้างแรงบันดาลใจและพัฒนาศักยภาพผู้เรียน</p>
+        <div class="breadcrumb">
+          <a href="index.html">หน้าแรก</a>
+          <span>/</span>
+          <span>ครูผู้สอน</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teacher Grid Section -->
+  <section class="teacher-grid-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>ทำความรู้จักกับทีมครูของเรา</h2>
+        <p>ทีมครูผู้มีความเชี่ยวชาญและประสบการณ์การสอนมากกว่า 10 ปี</p>
+      </div>
+
+      <div class="teacher-filter">
+        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn" data-filter="primary">ระดับประถม</button>
+        <button class="filter-btn" data-filter="secondary">ระดับมัธยม</button>
+        <button class="filter-btn" data-filter="special">วิชาเฉพาะ</button>
+      </div>
+
+      <div class="teacher-grid">
+        <!-- Teacher Card 1 -->
+        <div class="teacher-card" data-category="primary">
+          <div class="teacher-img-container">
+            <img src="images/teacher1.jpg" alt="ครูศุภรดา สุวรรณมณี">
+            <div class="teacher-badge">ครูประจำชั้น</div>
+          </div>
+          <div class="teacher-info">
+            <h3>ครูศุภรดา สุวรรณมณี</h3>
+            <p class="teacher-position">ครู คศ.3 วิทยฐานะชำนาญการพิเศษ</p>
+            <div class="teacher-meta">
+              <span><i class="fas fa-book-open"></i> คอมพิวเตอร์</span>
+              <span><i class="fas fa-clock"></i> 18 ปี</span>
+            </div>
+            <div class="teacher-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              <a href="#" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            </div>
+            <a href="teacher-detail.html" class="view-profile-btn">ดูประวัติ</a>
+          </div>
+        </div>
+
+        <!-- Teacher Card 2 -->
+        <div class="teacher-card" data-category="secondary">
+          <div class="teacher-img-container">
+            <img src="images/teacher2.jpg" alt="ครูสมชาย ใจดี">
+            <div class="teacher-badge">หัวหน้าสาขา</div>
+          </div>
+          <div class="teacher-info">
+            <h3>ครูสมชาย ใจดี</h3>
+            <p class="teacher-position">ครู คศ.4 วิทยฐานะเชี่ยวชาญ</p>
+            <div class="teacher-meta">
+              <span><i class="fas fa-book-open"></i> วิทยาศาสตร์</span>
+              <span><i class="fas fa-clock"></i> 15 ปี</span>
+            </div>
+            <div class="teacher-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              <a href="#" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            </div>
+            <a href="teacher-detail.html" class="view-profile-btn">ดูประวัติ</a>
+          </div>
+        </div>
+
+        <!-- Teacher Card 3 -->
+        <div class="teacher-card" data-category="special">
+          <div class="teacher-img-container">
+            <img src="images/teacher3.jpg" alt="ครูอรุณี วัฒนศิลป์">
+            <div class="teacher-badge">ครูแนะแนว</div>
+          </div>
+          <div class="teacher-info">
+            <h3>ครูอรุณี วัฒนศิลป์</h3>
+            <p class="teacher-position">ครู คศ.3 วิทยฐานะชำนาญการพิเศษ</p>
+            <div class="teacher-meta">
+              <span><i class="fas fa-book-open"></i> ศิลปะ</span>
+              <span><i class="fas fa-clock"></i> 12 ปี</span>
+            </div>
+            <div class="teacher-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              <a href="#" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            </div>
+            <a href="teacher-detail.html" class="view-profile-btn">ดูประวัติ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <button class="btn-load-more">โหลดครูเพิ่มเติม <i class="fas fa-chevron-down"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teacher Stats -->
+  <section class="teacher-stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-count="50">0</div>
+          <div class="stat-label">ครูผู้สอน</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="18">0</div>
+          <div class="stat-label">ปีประสบการณ์เฉลี่ย</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="95">0</div>
+          <div class="stat-label">% ผู้ปกครองพอใจ</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-count="30">0</div>
+          <div class="stat-label">รางวัลการแข่งขัน</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching Philosophy -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>ปรัชญาการสอนของเรา</h2>
+        <p>แนวทางการสอนที่มุ่งพัฒนาผู้เรียนอย่างรอบด้าน</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i class="fas fa-child"></i>
+          </div>
+          <h3>ผู้เรียนเป็นศูนย์กลาง</h3>
+          <p>ออกแบบการเรียนรู้ตามความสนใจและความสามารถของผู้เรียนแต่ละคน</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>สร้างแรงบันดาลใจ</h3>
+          <p>ปลูกฝังทัศนคติที่ดีต่อการเรียนรู้และพัฒนาตนเองอย่างต่อเนื่อง</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3>การเรียนรู้ร่วมกัน</h3>
+          <p>ส่งเสริมการทำงานเป็นทีมและการช่วยเหลือซึ่งกันและกัน</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="js/teacher.js"></script> -->
+  <script src="js/script.js"></script>
+</body>
+</html>

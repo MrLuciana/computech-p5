@@ -1,0 +1,375 @@
+/* Variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #34495e;
+    --text-light: #7f8c8d;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Sarabun', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .teacher-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .teacher-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern.png') repeat;
+    opacity: 0.1;
+  }
+  
+  .teacher-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .teacher-hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 0;
+  }
+  
+  .breadcrumb a, .breadcrumb span {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Teacher Grid Section */
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--secondary-color);
+  }
+  
+  .section-header p {
+    color: var(--text-light);
+    font-size: 1.2rem;
+  }
+  
+  .teacher-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-btn {
+    padding: 8px 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+  }
+  
+  .teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .teacher-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .teacher-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  
+  .teacher-img-container {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .teacher-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .teacher-card:hover .teacher-img-container img {
+    transform: scale(1.05);
+  }
+  
+  .teacher-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .teacher-info {
+    padding: 20px;
+  }
+  
+  .teacher-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+  }
+  
+  .teacher-position {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+  }
+  
+  .teacher-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  .teacher-meta i {
+    margin-right: 5px;
+    color: var(--secondary-color);
+  }
+  
+  .teacher-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .teacher-social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--light-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .teacher-social a:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  .view-profile-btn {
+    display: block;
+    text-align: center;
+    padding: 8px 0;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .view-profile-btn:hover {
+    background: var(--secondary-color);
+  }
+  
+  .btn-load-more {
+    padding: 10px 30px;
+    background: white;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-load-more:hover {
+    background: var(--secondary-color);
+    color: white;
+  }
+  
+  /* Stats Section */
+  .teacher-stats {
+    background: var(--primary-color);
+    color: white;
+    padding: 5rem 0;
+    margin: 5rem 0;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .stat-item {
+    padding: 20px;
+  }
+  
+  .stat-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  /* Philosophy Section */
+  .philosophy-section {
+    padding: 5rem 0;
+    background: var(--light-color);
+  }
+  
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .philosophy-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .philosophy-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .philosophy-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+  }
+  
+  .philosophy-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .philosophy-card p {
+    color: var(--text-light);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .teacher-hero {
+      padding: 4rem 0;
+    }
+    
+    .teacher-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .teacher-hero p {
+      font-size: 1.2rem;
+    }
+    
+    .section-header h2 {
+      font-size: 2rem;
+    }
+    
+    .teacher-filter {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .teacher-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

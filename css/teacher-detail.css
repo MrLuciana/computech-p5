@@ -1,0 +1,171 @@
+/* Variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #34495e;
+    --text-light: #7f8c8d;
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Sarabun', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--secondary-color);
+  }
+  
+  .section-title i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+  }
+  
+  /* Teacher Hero Section */
+  .teacher-detail-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 4rem 0;
+    color: white;
+  }
+  
+  .teacher-hero-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+  
+  .teacher-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .teacher-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .teacher-headline h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .teacher-position {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.9);
+  }
+  
+  .teacher-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .teacher-meta span {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  
+  .teacher-meta i {
+    margin-right: 5px;
+    color: var(--accent-color);
+  }
+  
+  .teacher-social {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+  }
+  
+  /* Breadcrumb */
+  .breadcrumb-container {
+    background: var(--light-color);
+    padding: 15px 0;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+  
+  .breadcrumb a, .breadcrumb span {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  
+  .breadcrumb a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+  
+  /* Main Content */
+  .teacher-detail-container {
+    padding: 4rem 0;
+  }
+  
+  .teacher-about {
+    margin-bottom: 3rem;
+  }
+  
+  .teacher-quote {
+    background: var(--light-color);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    position: relative;
+  }
+  
+  .teacher-quote p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 0;
+  }
+  
